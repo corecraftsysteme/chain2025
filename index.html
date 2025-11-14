@@ -1,147 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chain2025 — Forschungsübersicht</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>corecraftsysteme / chain2025 — Repository-Übersicht</title>
+  <meta name="description" content="Browserbasierte Übersicht und Viewer für das GitHub-Repository corecraftsysteme/chain2025" />
+
+  <!-- Einfaches, neutrales Styling -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa6bf; --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%; margin:0; background:linear-gradient(180deg,#071026 0%, #081325 100%); color:#e6eef6;}
+    .wrap{max-width:1100px;margin:28px auto;padding:20px;}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    .logo{
+      width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#0ea5a0,#6366f1);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#031025;
+      box-shadow:0 6px 18px rgba(2,6,23,0.6);
+    }
+    h1{margin:0;font-size:1.25rem}
+    .meta{color:var(--muted);font-size:0.95rem}
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 22px rgba(2,6,23,0.6)}
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    button, .link-btn{
+      background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--accent);
+      padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:600;font-size:0.9rem;
+    }
+    .muted{color:var(--muted);font-size:0.92rem}
+    ul.files{list-style:none;padding:0;margin:0;max-height:62vh;overflow:auto}
+    ul.files li{padding:8px 10px;border-radius:8px;margin-bottom:6px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .path{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;color:#d9eaf7;font-size:0.9rem}
+    .size{color:var(--muted);font-size:0.82rem}
+    .readme{overflow:auto;max-height:72vh;padding:8px}
+    /* markdown content */
+    .readme h1{font-size:1.6rem}
+    .readme pre{background:#071226;padding:10px;border-radius:8px;overflow:auto}
+    .search{display:flex;gap:8px;margin:8px 0}
+    input[type="search"]{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    footer{margin-top:18px;color:var(--muted);font-size:0.9rem;text-align:center}
+    @media (max-width:960px){ .grid{grid-template-columns:1fr} .card{padding:12px} }
+  </style>
+
+  <!-- Marked.js für Markdown-Rendering & Highlight.js für Code-Highlighting (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Willkommen bei Chain2025</h1>
-      <p class="tagline">Ein Blockchain-Projekt für die Zukunft — Forschungsarbeiten, Frameworks und Integrationskonzepte</p>
-    </div>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="logo">C2</div>
+      <div>
+        <h1 id="repo-title">corecraftsysteme / chain2025</h1>
+        <div class="meta" id="repo-desc">Lade Repository-Daten…</div>
+      </div>
+    </header>
 
-  <main class="container">
-    <section id="about">
-      <h2>Über das Projekt</h2>
-      <p>Chain2025 ist ein innovatives Framework zur Erforschung und Entwicklung von Blockchain-Technologien, einschließlich Bitcoin-Integration und Genesis-Gateway-Strukturen. Dieses Portal dokumentiert Forschungsbereiche, eingesetzte Frameworks und Integrationsmuster.</p>
-    </section>
+    <div class="grid">
+      <!-- Links: Readme / Datei-Viewer -->
+      <div class="card">
+        <nav>
+          <button id="refreshBtn">Aktualisieren</button>
+          <button id="showReadmeBtn">README</button>
+          <button id="showFilesBtn">Dateien</button>
+          <a id="openOnGitHub" class="link-btn" href="#" target="_blank" rel="noopener">Auf GitHub öffnen</a>
+        </nav>
 
-    <section id="repo-contents">
-      <h2>Repository-Inhalte</h2>
-      <ul>
-        <li><strong>Genesis-Gateway Frameworks:</strong> Grundlegende Architektur</li>
-        <li><strong>Bitcoin-Verbindung:</strong> Erste Implementierung</li>
-        <li><strong>Sicherheitsprotokolle:</strong> Dokumentation im SECURITY.md</li>
-        <li><strong>Poster & Manifest:</strong> <a href="assets/Chain2025Poster.png" target="_blank" rel="noopener">Chain2025Poster.png</a> und <a href="manifest.json" target="_blank" rel="noopener">manifest.json</a></li>
-      </ul>
-    </section>
+        <div style="margin-top:12px" class="muted" id="repo-meta">Lade Informationen…</div>
 
-    <section id="research">
-      <h2>Forschungsarbeiten & Technologien aus dem Bericht</h2>
+        <div style="margin-top:14px">
+          <div class="search">
+            <input id="fileSearch" type="search" placeholder="Dateien filtern (z. B. README, src/, package.json)" />
+            <button id="clearSearch">×</button>
+          </div>
 
-      <div class="table-controls">
-        <input id="table-filter" type="search" placeholder="Filter nach Thema, Framework oder Beschreibung..." aria-label="Tabelle filtern">
-        <a class="download-btn" href="manifest.json" download>Manifest herunterladen</a>
+          <div id="viewer" class="readme card" style="margin-top:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);">
+            <div id="viewer-content" class="readme">Wähle 'README' oder 'Dateien' oben.</div>
+          </div>
+        </div>
       </div>
 
-      <div class="table-wrapper" role="region" aria-label="Forschungsübersicht">
-        <table id="research-table">
-          <caption class="sr-only">Tabelle: Forschungsarbeiten und genutzte Technologien</caption>
-          <thead>
-            <tr>
-              <th>Thema</th>
-              <th>Bezeichnung / Framework</th>
-              <th>Beschreibung / Fokus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Genesis-Protokoll</td>
-              <td>Genesis Liberation Protocol (Chain2025)</td>
-              <td>Symbolische und reale Wertübertragung, audit-sealed Artefakte, CLI‑Rituale</td>
-            </tr>
-            <tr>
-              <td>Telemetrie &amp; Audit</td>
-              <td>Chain2025, Zenoh (Rust)</td>
-              <td>Auditierbare Register, verteilte Telemetrie, resilient gegen Fehlerquellen</td>
-            </tr>
-            <tr>
-              <td>Symbolische KI</td>
-              <td>Mindverse, OneLife, Movements Emulator</td>
-              <td>Modellierung symbolischer Weltdynamiken, Entscheidungslogik, Audit‑Workflows</td>
-            </tr>
-            <tr>
-              <td>Bewegungslogik</td>
-              <td>Bewegungslogik Emulator</td>
-              <td>Erweiterte FSMs, zyklische Steuerung, Event‑Trigger, Simulation von Zustandsmaschinen</td>
-            </tr>
-            <tr>
-              <td>Audit Chains</td>
-              <td>Chain2025, Skeletton</td>
-              <td>Chronologisch versionierte Artefakte, Compliance‑Workflows, Mehrparteien‑Siegel</td>
-            </tr>
-            <tr>
-              <td>Frameworks</td>
-              <td>Composable Architecture, Spring Statemachine, Yakindu, Qfsm</td>
-              <td>Modularität, Zustandsmaschinen, API‑First, Edge‑Integration</td>
-            </tr>
-            <tr>
-              <td>Tokenisierung</td>
-              <td>ARC Token (implizit über Chain2025)</td>
-              <td>Symbolische Wertrepräsentation, narrative Logging, Lizenzmodelle (MIT, CC0)</td>
-            </tr>
-            <tr>
-              <td>DNS‑Gateways</td>
-              <td>NGINX DoH/DoT, BSI‑konforme DNS‑Gateways</td>
-              <td>DNS‑over‑HTTPS/TLS, Reverse‑Proxy, Auditierbarkeit, Sicherheitsintegration</td>
-            </tr>
-            <tr>
-              <td>Edge‑Computing</td>
-              <td>SECO MX93, M100, SCADA LoRaWAN‑Gateways</td>
-              <td>Telemetrie‑nahe Verarbeitung, Multi‑Protokoll, TLS, Industrieanwendungen</td>
-            </tr>
-            <tr>
-              <td>Lizenzmodelle</td>
-              <td>MIT, GPL, Apache, Pay‑per‑use, Bundles</td>
-              <td>Verrechenbare Lizenzierung für APIs, Gateways und Token‑Frameworks</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- Rechts: Dateiliste / Details -->
+      <aside class="card">
+        <h3 style="margin-top:0">Dateien im Repository</h3>
+        <div class="muted" style="margin-bottom:8px">Dateiliste (baumflach). Klick auf einen Eintrag zum Anzeigen.</div>
+        <ul id="fileList" class="files">
+          <li class="muted">Keine Dateien geladen — klicke "Aktualisieren".</li>
+        </ul>
 
-      <details>
-        <summary>Hinweise für Entwickler</summary>
-        <p>Die Tabelle ist clientseitig filterbar (oben). Weiterführende Integrationen (z. B. Verlinkung zu Beispiel-Implementationen, Deep‑Links zu Issues/PRs) können hinzugefügt werden. Manifest und Poster sind als Platzhalter verlinkt.</p>
-      </details>
-    </section>
-
-    <section id="contribute">
-      <h2>Mitmachen</h2>
-      <p>Du kannst den Code auf GitHub forken, Issues melden oder Pull Requests einreichen. Für größere Forschungsbeiträge bitte Issues mit Proposal-Template öffnen und relevante Artefakte als audit-sealed Attachments beifügen.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Chain2025 Projektteam</p>
+        <div style="margin-top:12px" class="muted">
+          Hinweis: Diese Seite liest öffentliche GitHub-APIs. Bei privaten Repositories oder API-Rate-Limits ist ein GitHub-Token erforderlich.
+        </div>
+      </aside>
     </div>
-  </footer>
 
-  <script src="script.js" defer></script>
-  <!-- SKELETTON-Verlinkung und Einbettung -->
-<section id="skelett-section" style="margin-top: 2em;">
-  <h2>SKELETTON-Modul</h2>
+    <footer>
+      Dieses Viewer-Template lädt repository-Inhalte dynamisch von GitHub. Anpassungen gern auf Anfrage.
+    </footer>
+  </div>
 
-  <!-- Hyperlink -->
-  <p>
-    <a href="SKELETTON/skletton_index.html" target="_blank" style="font-weight: bold; text-decoration: underline;">
-      → Zum SKELETTON-Modul
-    </a>
-  </p>
+  <script>
+    // Repository-Konfiguration — hier ist bereits das gewünschte Repo eingetragen
+    const owner = 'corecraftsysteme';
+    const repo = 'chain2025';
 
-  <!-- iframe-Fallback -->
-  <iframe src="SKELETTON/skletton_index.html"
-          width="100%"
-          height="600px"
-          style="border: 1px solid #ccc; border-radius: 8px;">
-    Dein Browser unterstützt keine eingebetteten Inhalte.
-  </iframe>
-</section>
+    // UI-Elemente
+    const repoTitleEl = document.getElementById('repo-title');
+    const repoDescEl = document.getElementById('repo-desc');
+    const repoMetaEl = document.getElementById('repo-meta');
+    const openOnGitHub = document.getElementById('openOnGitHub');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const showReadmeBtn = document.getElementById('showReadmeBtn');
+    const showFilesBtn = document.getElementById('showFilesBtn');
+    const viewerContent = document.getElementById('viewer-content');
+    const fileListEl = document.getElementById('fileList');
+    const fileSearch = document.getElementById('fileSearch');
+    const clearSearch = document.getElementById('clearSearch');
+
+    // Daten-Cache
+    let defaultBranch = 'main';
+    let tree = []; // array of {path, mode, type, sha, size, url}
+    let repoInfo = null;
+
+    // Hilfsfunktionen
+    function api(url){ return fetch(url).then(r=>r.ok? r.json() : Promise.reject(r.statusText)); }
+
+    async function loadRepoInfo(){
+      repoDescEl.textContent = 'Lade Repository-Metadaten…';
+      try{
+        repoInfo = await api(`https://api.github.com/repos/${owner}/${repo}`);
+        defaultBranch = repoInfo.default_branch || defaultBranch;
+        repoTitleEl.textContent = `${owner} / ${repo}`;
+        repoDescEl.textContent = repoInfo.description || 'Keine Beschreibung';
+        repoMetaEl.textContent = `Sterne: ${repoInfo.stargazers_count} · Forks: ${repoInfo.forks_count} · Lizenz: ${repoInfo.license?.name || 'keine Angabe'}`;
+        openOnGitHub.href = repoInfo.html_url;
+      }catch(err){
+        repoDescEl.textContent = 'Fehler beim Laden der Repo-Daten (evtl. privat oder API-Block).';
+        repoMetaEl.textContent = '';
+        console.error(err);
+      }
+    }
+
+    async function loadTree(){
+      viewerContent.innerHTML = 'Lade Dateibaum…';
+      try{
+        // Wir verwenden git/trees mit recursive=1, um alle Pfade zu erhalten
+        const treeResp = await api(`https://api.github.com/repos/${owner}/${repo}/git/trees/${defaultBranch}?recursive=1`);
+        tree = treeResp.tree || [];
+        renderFileList(tree);
+        viewerContent.innerHTML = '<em>README oder Datei auswählen.</em>';
+      }catch(err){
+        viewerContent.innerHTML = '<div class="muted">Konnte Dateibaum nicht laden. Prüfe Repo-Namen, Sichtbarkeit oder API-Rate-Limits.</div>';
+        console.error(err);
+      }
+    }
+
+    function renderFileList(list){
+      const filtered = list
+        .filter(e=> e.type === 'blob') // nur Dateien
+        .sort((a,b)=> a.path.localeCompare(b.path));
+      fileListEl.innerHTML = '';
+      if(filtered.length===0){
+        fileListEl.innerHTML = '<li class="muted">Keine Dateien gefunden.</li>';
+        return;
+      }
+      for(const f of filtered){
+        const li = document.createElement('li');
+        const left = document.createElement('div');
+        left.style.display = 'flex'; left.style.flexDirection = 'column';
+        const p = document.createElement('div'); p.className='path'; p.textContent = f.path;
+        const s = document.createElement('div'); s.className='size muted'; s.textContent = (f.size? `${f.size} B` : '');
+        left.appendChild(p); left.appendChild(s);
+        const btnWrap = document.createElement('div');
+        const viewBtn = document.createElement('button');
+        viewBtn.textContent = 'Anzeigen';
+        viewBtn.onclick = ()=> showFile(f.path);
+        const rawLink = document.createElement('a');
+        rawLink.href = `https://raw.githubusercontent.com/${owner}/${repo}/${defaultBranch}/${encodeURI(f.path)}`;
+        rawLink.target = '_blank';
+        rawLink.rel = 'noopener';
+        rawLink.className = 'link-btn';
+        rawLink.style.marginLeft = '8px';
+        rawLink.textContent = 'Raw';
+        btnWrap.appendChild(viewBtn); btnWrap.appendChild(rawLink);
+
+        li.appendChild(left);
+        li.appendChild(btnWrap);
+        fileListEl.appendChild(li);
+      }
+    }
+
+    async function showREADME(){
+      viewerContent.innerHTML = 'Lade README…';
+      // Versuche README mit Standard-Namen
+      const candidates = ['README.md','README.MD','Readme.md','readme.md','README'];
+      for(const name of candidates){
+        try{
+          const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${defaultBranch}/${name}`;
+          const r = await fetch(rawUrl);
+          if(!r.ok) continue;
+          const md = await r.text();
+          renderMarkdown(md);
+          return;
+        }catch(e){
+          // weiter versuchen
+        }
+      }
+      viewerContent.innerHTML = '<div class="muted">Keine README im Repository gefunden.</div>';
+    }
+
+    function renderMarkdown(md){
+      // Marked rendern, Highlight aktivieren
+      const html = marked.parse(md, {mangle:false, headerIds:true});
+      viewerContent.innerHTML = html;
+      // Syntax-Highlight nach dem Einfügen
+      document.querySelectorAll('pre code').forEach((block) => {
+        try{ hljs.highlightElement(block); }catch(e){}
+      });
+    }
+
+    async function showFile(path){
+      viewerContent.innerHTML = `Lade ${path}…`;
+      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${defaultBranch}/${encodeURI(path)}`;
+      try{
+        const r = await fetch(rawUrl);
+        if(!r.ok) throw new Error('Nicht verfügbar');
+        const text = await r.text();
+        // Wenn Markdown: rendern
+        if(/\.(md|markdown)$/i.test(path) || /^README/i.test(path)){
+          renderMarkdown(text);
+          return;
+        }
+        // Wenn Text-Datei: Anzeige mit Code-Highlight
+        const escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        viewerContent.innerHTML = `<pre><code>${escaped}</code></pre>`;
+        document.querySelectorAll('pre code').forEach((block) => {
+          try{ hljs.highlightElement(block); }catch(e){}
+        });
+      }catch(err){
+        viewerContent.innerHTML = '<div class="muted">Datei konnte nicht geladen werden (evtl. Binärdatei oder fehlende Berechtigung).</div>';
+        console.error(err);
+      }
+    }
+
+    // Suche filtern
+    function applyFilter(){
+      const q = fileSearch.value.trim().toLowerCase();
+      const items = Array.from(fileListEl.children);
+      if(q===''){ items.forEach(i=> i.style.display='flex'); return; }
+      items.forEach(li=>{
+        const path = li.querySelector('.path')?.textContent?.toLowerCase() || '';
+        li.style.display = path.includes(q) ? 'flex' : 'none';
+      });
+    }
+
+    // Event-Handler
+    refreshBtn.addEventListener('click', async()=> {
+      refreshBtn.textContent = 'Aktualisiere…'; refreshBtn.disabled = true;
+      await loadRepoInfo();
+      await loadTree();
+      refreshBtn.textContent = 'Aktualisieren'; refreshBtn.disabled = false;
+    });
+    showReadmeBtn.addEventListener('click', showREADME);
+    showFilesBtn.addEventListener('click', ()=> {
+      viewerContent.innerHTML = '<div class="muted">Wähle eine Datei in der Liste zum Anzeigen.</div>';
+    });
+    fileSearch.addEventListener('input', applyFilter);
+    clearSearch.addEventListener('click', ()=>{ fileSearch.value=''; applyFilter(); });
+
+    // Initialer Ladeversuch
+    (async function init(){
+      await loadRepoInfo();
+      await loadTree();
+      // Auto: zeige README, falls vorhanden
+      await showREADME();
+    })();
+  </script>
 </body>
 </html>
-
