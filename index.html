@@ -103,182 +103,19 @@
     </footer>
   </div>
 
-  <script>
-    // Repository-Konfiguration — hier ist bereits das gewünschte Repo eingetragen
-    const owner = 'corecraftsysteme';
-    const repo = 'chain2025';
-
-    // UI-Elemente
-    const repoTitleEl = document.getElementById('repo-title');
-    const repoDescEl = document.getElementById('repo-desc');
-    const repoMetaEl = document.getElementById('repo-meta');
-    const openOnGitHub = document.getElementById('openOnGitHub');
-    const refreshBtn = document.getElementById('refreshBtn');
-    const showReadmeBtn = document.getElementById('showReadmeBtn');
-    const showFilesBtn = document.getElementById('showFilesBtn');
-    const viewerContent = document.getElementById('viewer-content');
-    const fileListEl = document.getElementById('fileList');
-    const fileSearch = document.getElementById('fileSearch');
-    const clearSearch = document.getElementById('clearSearch');
-
-    // Daten-Cache
-    let defaultBranch = 'main';
-    let tree = []; // array of {path, mode, type, sha, size, url}
-    let repoInfo = null;
-
-    // Hilfsfunktionen
-    function api(url){ return fetch(url).then(r=>r.ok? r.json() : Promise.reject(r.statusText)); }
-
-    async function loadRepoInfo(){
-      repoDescEl.textContent = 'Lade Repository-Metadaten…';
-      try{
-        repoInfo = await api(`https://api.github.com/repos/${owner}/${repo}`);
-        defaultBranch = repoInfo.default_branch || defaultBranch;
-        repoTitleEl.textContent = `${owner} / ${repo}`;
-        repoDescEl.textContent = repoInfo.description || 'Keine Beschreibung';
-        repoMetaEl.textContent = `Sterne: ${repoInfo.stargazers_count} · Forks: ${repoInfo.forks_count} · Lizenz: ${repoInfo.license?.name || 'keine Angabe'}`;
-        openOnGitHub.href = repoInfo.html_url;
-      }catch(err){
-        repoDescEl.textContent = 'Fehler beim Laden der Repo-Daten (evtl. privat oder API-Block).';
-        repoMetaEl.textContent = '';
-        console.error(err);
-      }
-    }
-
-    async function loadTree(){
-      viewerContent.innerHTML = 'Lade Dateibaum…';
-      try{
-        // Wir verwenden git/trees mit recursive=1, um alle Pfade zu erhalten
-        const treeResp = await api(`https://api.github.com/repos/${owner}/${repo}/git/trees/${defaultBranch}?recursive=1`);
-        tree = treeResp.tree || [];
-        renderFileList(tree);
-        viewerContent.innerHTML = '<em>README oder Datei auswählen.</em>';
-      }catch(err){
-        viewerContent.innerHTML = '<div class="muted">Konnte Dateibaum nicht laden. Prüfe Repo-Namen, Sichtbarkeit oder API-Rate-Limits.</div>';
-        console.error(err);
-      }
-    }
-
-    function renderFileList(list){
-      const filtered = list
-        .filter(e=> e.type === 'blob') // nur Dateien
-        .sort((a,b)=> a.path.localeCompare(b.path));
-      fileListEl.innerHTML = '';
-      if(filtered.length===0){
-        fileListEl.innerHTML = '<li class="muted">Keine Dateien gefunden.</li>';
-        return;
-      }
-      for(const f of filtered){
-        const li = document.createElement('li');
-        const left = document.createElement('div');
-        left.style.display = 'flex'; left.style.flexDirection = 'column';
-        const p = document.createElement('div'); p.className='path'; p.textContent = f.path;
-        const s = document.createElement('div'); s.className='size muted'; s.textContent = (f.size? `${f.size} B` : '');
-        left.appendChild(p); left.appendChild(s);
-        const btnWrap = document.createElement('div');
-        const viewBtn = document.createElement('button');
-        viewBtn.textContent = 'Anzeigen';
-        viewBtn.onclick = ()=> showFile(f.path);
-        const rawLink = document.createElement('a');
-        rawLink.href = `https://raw.githubusercontent.com/${owner}/${repo}/${defaultBranch}/${encodeURI(f.path)}`;
-        rawLink.target = '_blank';
-        rawLink.rel = 'noopener';
-        rawLink.className = 'link-btn';
-        rawLink.style.marginLeft = '8px';
-        rawLink.textContent = 'Raw';
-        btnWrap.appendChild(viewBtn); btnWrap.appendChild(rawLink);
-
-        li.appendChild(left);
-        li.appendChild(btnWrap);
-        fileListEl.appendChild(li);
-      }
-    }
-
-    async function showREADME(){
-      viewerContent.innerHTML = 'Lade README…';
-      // Versuche README mit Standard-Namen
-      const candidates = ['README.md','README.MD','Readme.md','readme.md','README'];
-      for(const name of candidates){
-        try{
-          const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${defaultBranch}/${name}`;
-          const r = await fetch(rawUrl);
-          if(!r.ok) continue;
-          const md = await r.text();
-          renderMarkdown(md);
-          return;
-        }catch(e){
-          // weiter versuchen
-        }
-      }
-      viewerContent.innerHTML = '<div class="muted">Keine README im Repository gefunden.</div>';
-    }
-
-    function renderMarkdown(md){
-      // Marked rendern, Highlight aktivieren
-      const html = marked.parse(md, {mangle:false, headerIds:true});
-      viewerContent.innerHTML = html;
-      // Syntax-Highlight nach dem Einfügen
-      document.querySelectorAll('pre code').forEach((block) => {
-        try{ hljs.highlightElement(block); }catch(e){}
-      });
-    }
-
-    async function showFile(path){
-      viewerContent.innerHTML = `Lade ${path}…`;
-      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${defaultBranch}/${encodeURI(path)}`;
-      try{
-        const r = await fetch(rawUrl);
-        if(!r.ok) throw new Error('Nicht verfügbar');
-        const text = await r.text();
-        // Wenn Markdown: rendern
-        if(/\.(md|markdown)$/i.test(path) || /^README/i.test(path)){
-          renderMarkdown(text);
-          return;
-        }
-        // Wenn Text-Datei: Anzeige mit Code-Highlight
-        const escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        viewerContent.innerHTML = `<pre><code>${escaped}</code></pre>`;
-        document.querySelectorAll('pre code').forEach((block) => {
-          try{ hljs.highlightElement(block); }catch(e){}
-        });
-      }catch(err){
-        viewerContent.innerHTML = '<div class="muted">Datei konnte nicht geladen werden (evtl. Binärdatei oder fehlende Berechtigung).</div>';
-        console.error(err);
-      }
-    }
-
-    // Suche filtern
-    function applyFilter(){
-      const q = fileSearch.value.trim().toLowerCase();
-      const items = Array.from(fileListEl.children);
-      if(q===''){ items.forEach(i=> i.style.display='flex'); return; }
-      items.forEach(li=>{
-        const path = li.querySelector('.path')?.textContent?.toLowerCase() || '';
-        li.style.display = path.includes(q) ? 'flex' : 'none';
-      });
-    }
-
-    // Event-Handler
-    refreshBtn.addEventListener('click', async()=> {
-      refreshBtn.textContent = 'Aktualisiere…'; refreshBtn.disabled = true;
-      await loadRepoInfo();
-      await loadTree();
-      refreshBtn.textContent = 'Aktualisieren'; refreshBtn.disabled = false;
-    });
-    showReadmeBtn.addEventListener('click', showREADME);
-    showFilesBtn.addEventListener('click', ()=> {
-      viewerContent.innerHTML = '<div class="muted">Wähle eine Datei in der Liste zum Anzeigen.</div>';
-    });
-    fileSearch.addEventListener('input', applyFilter);
-    clearSearch.addEventListener('click', ()=>{ fileSearch.value=''; applyFilter(); });
-
-    // Initialer Ladeversuch
-    (async function init(){
-      await loadRepoInfo();
-      await loadTree();
-      // Auto: zeige README, falls vorhanden
-      await showREADME();
-    })();
-  </script>
+ <section id="skelett-section" style="margin-top: 2em;">
+  <h2>SKELETTON-Modul</h2>
+  <p>
+    <a href="SKELETTON/skletton_index.html" target="_blank" style="font-weight: bold; text-decoration: underline;">
+      → Zum SKELETTON-Modul
+    </a>
+  </p>
+  <iframe src="SKELETTON/skletton_index.html"
+          width="100%"
+          height="600px"
+          style="border: 1px solid #ccc; border-radius: 8px;">
+    Dein Browser unterstützt keine eingebetteten Inhalte.
+  </iframe>
+</section>
 </body>
 </html>
