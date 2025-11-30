@@ -1,140 +1,124 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chain2025 — Forschungsübersicht</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Willkommen bei Chain2025</h1>
-      <p class="tagline">Ein Blockchain-Projekt für die Zukunft — Forschungsarbeiten, Frameworks und Integrationskonzepte</p>
-    </div>
-  </header>
-  <main class="container">
-    <section id="about">
-      <h2>Über das Projekt</h2>
-      <p>Chain2025 ist ein innovatives Framework zur Erforschung und Entwicklung von Blockchain-Technologien, einschließlich Bitcoin-Integration und Genesis-Gateway-Strukturen. Dieses Portal dokument[...]
-    </section>
-    <section id="repo-contents">
-      <h2>Repository-Inhalte</h2>
-      <ul>
-        <li><strong>Genesis-Gateway Frameworks:</strong> Grundlegende Architektur</li>
-        <li><strong>Bitcoin-Verbindung:</strong> Erste Implementierung</li>
-        <li><strong>Sicherheitsprotokolle:</strong> Dokumentation im SECURITY.md</li>
-        <li><strong>Poster & Manifest:</strong> <a href="assets/Chain2025Poster.png" target="_blank" rel="noopener">Chain2025Poster.png</a> und <a href="manifest.json" target="_blank" rel="noopener">m[...]
-      </ul>
-    </section>
-    <section id="research">
-      <h2>Forschungsarbeiten & Technologien aus dem Bericht</h2>
-      <div class="table-controls">
-        <input id="table-filter" type="search" placeholder="Filter nach Thema, Framework oder Beschreibung..." aria-label="Tabelle filtern">
-        <a class="download-btn" href="manifest.json" download>Manifest herunterladen</a>
-      </div>
-      <div class="table-wrapper" role="region" aria-label="Forschungsübersicht">
-        <table id="research-table">
-          <tr>
-           </tr>
-          <caption class="sr-only">Tabelle: Forschungsarbeiten und genutzte Technologien</caption>
-          <thead>
-            <tr>
-              <th>Thema</th>
-              <th>Bezeichnung / Framework</th>
-              <th>Beschreibung / Fokus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-          <td>Genesis-Protokoll</td>
-          <td>Genesis Liberation Protocol (Chain2025)</td>
-          <td>
-           Symbolische und reale Wertübertragung, audit-sealed Artefakte, CLI‑Rituale  
-          <br>
-           <a href="https://chain2025.corecraftgenesis.ch/chronik/manifest-trigger.md" target="_blank" rel="noopener">
-            Manifest‑Trigger Dokumentation
-           </a>
-            </td>
-         <tr>
-  <td>Telemetrie &amp; Audit</td>
-  <td>Chain2025, Zenoh (Rust)</td>
-  <td>
-    Auditierbare Register, verteilte Telemetrie, resilient gegen Fehlerquellen<br>
-    <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/telemetrie&audit.md" 
-       target="_blank" rel="noopener">
-      → Dokumentation öffnen
-    </a>
-  </td>
-</tr>
-     <tr>
-       <td>Symbolische KI</td>
-         <td>Mindverse, OneLife, Bewegungs-Emulator</td>
-         <td>
-          Modellierung symbolischer Weltdynamiken, Entscheidungslogik, Audit‑Workflows<br>
-         <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/symbolischeKI.md" 
-          target="_blank" rel="noopener">
-         → Dokumentation öffnen
-         </a>
-         </td>
-          </tr>
-            <tr>
-              <td>Bewegungslogik</td>
-              <td>Bewegungslogik Emulator</td>
-              <td>Erweiterte FSMs, zyklische Steuerung, Event‑Trigger, Simulation von Zustandsmaschinen</td>
-            </tr>
-            <tr>
-              <td>Audit Chains</td>
-              <td>Chain2025, Skeletton</td>
-              <td>Chronologisch versionierte Artefakte, Compliance‑Workflows, Mehrparteien‑Siegel</td>
-            </tr>
-            <tr>
-              <td>Frameworks</td>
-              <td>Composable Architecture, Spring Statemachine, Yakindu, Qfsm</td>
-              <td>Modularität, Zustandsmaschinen, API‑First, Edge‑Integration</td>
-            </tr>
-            <tr>
-              <td>Tokenisierung</td>
-              <td>ARC Token (implizit über Chain2025)</td>
-              <td>Symbolische Wertrepräsentation, narrative Logging, Lizenzmodelle (MIT, CC0)</td>
-            </tr>
-            <tr>
-              <td>DNS‑Gateways</td>
-              <td>NGINX DoH/DoT, BSI‑konforme DNS‑Gateways</td>
-              <td>DNS‑over‑HTTPS/TLS, Reverse‑Proxy, Auditierbarkeit, Sicherheitsintegration</td>
-            </tr>
-            <tr>
-              <td>Edge‑Computing</td>
-              <td>SECO MX93, M100, SCADA LoRaWAN‑Gateways</td>
-              <td>Telemetrie‑nahe Verarbeitung, Multi‑Protokoll, TLS, Industrieanwendungen</td>
-            </tr>
-            <tr>
-              <td>Lizenzmodelle</td>
-              <td>MIT, GPL, Apache, Pay‑per‑use, Bundles</td>
-              <td>Verrechenbare Lizenzierung für APIs, Gateways und Token‑Frameworks</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<tbody>
+  <tr>
+    <td>Genesis-Protokoll</td>
+    <td>Genesis Liberation Protocol (Chain2025)</td>
+    <td>
+      Symbolische und reale Wertübertragung, audit-sealed Artefakte, CLI‑Rituale<br>
+      <a class="btn-link" href="https://chain2025.corecraftgenesis.ch/chronik/manifest-trigger.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
 
-      <details>
-        <summary>Hinweise für Entwickler</summary>
-        <p>Die Tabelle ist clientseitig filterbar (oben). Weiterführende Integrationen (z. B. Verlinkung zu Beispiel-Implementationen, Deep‑Links zu Issues/PRs) können hinzugefügt werden. Manifes[...]
-      </details>
-    </section>
+  <tr>
+    <td>Telemetrie &amp; Audit</td>
+    <td>Chain2025, Zenoh (Rust)</td>
+    <td>
+      Auditierbare Register, verteilte Telemetrie, resilient gegen Fehlerquellen<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/%23telemetrie&audit.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
 
-    <section id="contribute">
-      <h2>Mitmachen</h2>
-      <p>Du kannst den Code auf GitHub forken, Issues melden oder Pull Requests einreichen. Für größere Forschungsbeiträge bitte Issues mit Proposal-Template öffnen und relevante Artefakte als au[...]
-    </section>
-  </main>
+  <tr>
+    <td>Symbolische KI</td>
+    <td>Mindverse, OneLife, Bewegungs-Emulator</td>
+    <td>
+      Modellierung symbolischer Weltdynamiken, Entscheidungslogik, Audit‑Workflows<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/symbolischeKI.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Chain2025 Projektteam</p>
-    </div>
-  </footer>
+  <tr>
+    <td>Bewegungslogik</td>
+    <td>Bewegungslogik Emulator</td>
+    <td>
+      Erweiterte FSMs, zyklische Steuerung, Event‑Trigger, Simulation von Zustandsmaschinen<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/bewegungslogik.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Audit Chains</td>
+    <td>Chain2025, Skeletton</td>
+    <td>
+      Chronologisch versionierte Artefakte, Compliance‑Workflows, Mehrparteien‑Siegel<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/auditchains.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Frameworks</td>
+    <td>Composable Architecture, Spring Statemachine, Yakindu, Qfsm</td>
+    <td>
+      Modularität, Zustandsmaschinen, API‑First, Edge‑Integration<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/frameworks.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Tokenisierung</td>
+    <td>ARC Token (implizit über Chain2025)</td>
+    <td>
+      Symbolische Wertrepräsentation, narrative Logging, Lizenzmodelle (MIT, CC0)<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/tokenisierung.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>DNS‑Gateways</td>
+    <td>NGINX DoH/DoT, BSI‑konforme DNS‑Gateways</td>
+    <td>
+      DNS‑over‑HTTPS/TLS, Reverse‑Proxy, Auditierbarkeit, Sicherheitsintegration<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/dnsgateways.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Edge‑Computing</td>
+    <td>SECO MX93, M100, SCADA LoRaWAN‑Gateways</td>
+    <td>
+      Telemetrie‑nahe Verarbeitung, Multi‑Protokoll, TLS, Industrieanwendungen<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/edgecomputing.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Lizenzmodelle</td>
+    <td>MIT, GPL, Apache, Pay‑per‑use, Bundles</td>
+    <td>
+      Verrechenbare Lizenzierung für APIs, Gateways und Token‑Frameworks<br>
+      <a class="btn-link" href="https://github.com/corecraftsysteme/chain2025/blob/main/chronik/lizenzmodelle.md" 
+         target="_blank" rel="noopener">
+        → Dokumentation öffnen
+      </a>
+    </td>
+  </tr>
+</tbody>
 
   <script src="script.js" defer></script>
   <!-- SKELETTON-Verlinkung und Einbettung -->
