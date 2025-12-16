@@ -7,15 +7,10 @@ favicon: "/assets/favicon.ico"
 
 color_scheme: "corecraft"
 
-mermaid:
-  theme: dark
+search_enabled: true
 
+footer_content: "Validator‑signierte Dokumentation • CoreCraft Systems • Chain2025"
 
-# GitHub Pages settings
-baseurl: "/"
-url: "https://<DEIN-GITHUB-USERNAME>.github.io/<DEIN-REPO>"
-
-# Sidebar Navigation
 nav:
   - title: "Overview"
     url: "index.md"
@@ -30,12 +25,10 @@ nav:
   - title: "Audit"
     url: "audit.md"
 
-# Optional Branding
-logo: "/assets/logo.png"
-favicon: "/assets/favicon.ico"
+mermaid:
+  theme: dark
 
-# Enable search
-search_enabled: true
-
-footer_content: "Validator‑signierte Dokumentation • CoreCraft Systems • Chain2025"
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
