@@ -1,4 +1,9 @@
-# 📘 **docs/skeletton.md**
+**Navigation:**  
+[Index](index.md) • [Registry](registry.md) • [Architecture](architecture.md) • [Rituals](rituals.md) • [Audit](audit.md)
+
+# 🛰️ Skeletton™ – Satellite Drift‑Ritual Sport
+...
+[⬅️ Zurück zur Übersicht](index.md)
 
 ```markdown
 # 🛰️ Skeletton™ – Satellite Drift‑Ritual Sport
