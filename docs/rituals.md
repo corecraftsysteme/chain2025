@@ -1,4 +1,9 @@
-# 📘 **docs/rituals.md**
+**Navigation:**  
+[Index](index.md) • [Registry](registry.md) • [Architecture](architecture.md) • [Skeletton](skeletton.md) • [Audit](audit.md)
+
+# 🔮 Chain Ritual Framework – Genesis & Closure Rituals
+...
+[⬅️ Zurück zur Übersicht](index.md)
 
 ```markdown
 # 🔮 Chain Ritual Framework – Genesis & Closure Rituals
