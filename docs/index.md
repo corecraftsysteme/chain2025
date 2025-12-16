@@ -3,6 +3,11 @@
 **Navigation:**  
 [Registry](registry.md) • [Architecture](architecture.md) • [Rituals](rituals.md) • [Skeletton](skeletton.md) • [Audit](audit.md)
 
+<div style="padding: 2rem; background:#0A0F1F; color:#EAEAEA; border-radius:12px; margin-bottom:2rem;">
+  <h1 style="margin:0; font-size:2.4rem;">Chain2025 – Genesis Liberation Protocol</h1>
+  <p style="margin:0.5rem 0 0 0; font-size:1.2rem;">Audit‑sealed, validator‑driven, mythic‑technical documentation</p>
+</div>
+
 Willkommen im Dokumentationszentrum des Chain2025 – Genesis Liberation Protocol.  
 ...
 
