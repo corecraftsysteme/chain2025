@@ -1,4 +1,9 @@
-# 📘 **docs/audit.md**
+**Navigation:**  
+[Index](index.md) • [Registry](registry.md) • [Architecture](architecture.md) • [Rituals](rituals.md) • [Skeletton](skeletton.md)
+
+# 🧾 Chain2025 Audit Framework
+...
+[⬅️ Zurück zur Übersicht](index.md)
 
 ```markdown
 # 🧾 Chain2025 Audit Framework
