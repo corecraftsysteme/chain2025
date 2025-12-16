@@ -1,7 +1,7 @@
----
+Wenn du **`docs/registry.md`** öffnest und YAML‑Fehler bekommst, dann liegt das nicht an der Datei selbst, sondern daran, **dass ein YAML‑Parser versucht, sie zu interpretieren**, obwohl es eine **Markdown‑Datei** ist.
 
-# 📘 `docs/registry.md`
-
+Markdown ist **kein YAML**.  
+Wenn irgendein Tool, Script oder Frontmatter‑Parser versucht, die Datei als YAML zu lesen, entsteht genau dieser Fehler:
 ```markdown
 # 📡 Chain2025 Registry – Audit‑Sealed Asset Graph
 
@@ -31,8 +31,6 @@ Diese Struktur wird automatisch aus `assets/registry/registry.json` geladen und 
 
 ## 🛰️ ASCII‑Graph
 
-Der ASCII‑Graph zeigt die Registry‑Beziehungen in einer menschenlesbaren Terminal‑Ansicht:
-
 ```
 SW-001 ──▶ DOC-010
 DOC-010 ──▶ (keine Referenzen)
@@ -42,25 +40,14 @@ DOC-010 ──▶ (keine Referenzen)
 
 ## 🧭 Mermaid‑Diagramm
 
-GitHub‑kompatible Visualisierung der Registry‑Beziehungen:
-
 ```mermaid
 graph TD
     SW-001["SW-001"] --> DOC-010["DOC-010"]
 ```
 
-Dieses Diagramm wird automatisch gerendert, wenn die Datei auf GitHub angezeigt wird.
-
 ---
 
 ## 🧬 JSON‑Graph (maschinenlesbar)
-
-Der JSON‑Graph ist die Grundlage für:
-
-- CI‑Pipelines  
-- Visualisierungstools  
-- externe Prüfer  
-- automatisierte Reports  
 
 ```json
 {
@@ -125,20 +112,16 @@ Beispielstruktur:
 
 | Kategorie        | Bedeutung |
 |------------------|-----------|
-| `software`       | Code‑Artefakte, Module, Engines |
-| `documentation`  | Markdown‑Dokus, Protokolle, Chroniken |
-| `ritual`         | CLI‑Rituale, Genesis‑Ereignisse |
-| `skeletton`      | Drift‑Sport‑Artefakte, Echo‑Logs |
-| `wallet`         | Wallet‑Strukturen, Transfer‑Logs |
-| `bridge`         | RPC‑Deployment, Asset‑Mirroring |
-
-Diese Kategorien können später als **Mermaid‑Subgraphs** visualisiert werden.
+| software         | Code‑Artefakte, Module, Engines |
+| documentation    | Markdown‑Dokus, Protokolle, Chroniken |
+| ritual           | CLI‑Rituale, Genesis‑Ereignisse |
+| skeletton        | Drift‑Sport‑Artefakte, Echo‑Logs |
+| wallet           | Wallet‑Strukturen, Transfer‑Logs |
+| bridge           | RPC‑Deployment, Asset‑Mirroring |
 
 ---
 
 ## 🔮 Zukunft: Erweiterte Visualisierung
-
-Geplant:
 
 - Mermaid‑Subgraphs für Kategorien  
 - farbcodierte Asset‑Typen  
@@ -166,18 +149,5 @@ Jede Änderung an der Registry ist ein **symbolischer und technischer Akt**.
 
 `#Chain2025` `#Registry` `#AuditGraph` `#GenesisLiberation`  
 `#MermaidDiagram` `#Chronik` `#RitualEngine`
-
 ```
 
----
-
-Wenn du willst, kann ich dir zusätzlich:
-
-- eine **docs/architecture.md**  
-- eine **docs/rituals.md**  
-- eine **docs/skeletton.md**  
-- oder eine **docs/audit.md**  
-
-generieren — alles im gleichen Stil, modular, audit‑tauglich und mythologisch sauber.
-
-Sag einfach, welches Dokument als Nächstes entstehen soll.
