@@ -1,4 +1,9 @@
+**Navigation:**  
+[Index](index.md) • [Architecture](architecture.md) • [Rituals](rituals.md) • [Skeletton](skeletton.md) • [Audit](audit.md)
+
 # 📡 Chain2025 Registry – Audit‑Sealed Asset Graph
+...
+[⬅️ Zurück zur Übersicht](index.md)
 
 Die Chain2025‑Registry ist das zentrale, audit‑taugliche Verzeichnis aller technischen, narrativen und rituellen Artefakte.  
 Sie bildet die Grundlage für:
