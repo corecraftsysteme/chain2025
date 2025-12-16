@@ -1,0 +1,29 @@
+title: "Chain2025 Documentation"
+description: "Audit-sealed documentation for the Chain2025 Genesis Liberation Protocol"
+theme: "just-the-docs"
+
+# GitHub Pages settings
+baseurl: "/"
+url: "https://<DEIN-GITHUB-USERNAME>.github.io/<DEIN-REPO>"
+
+# Sidebar Navigation
+nav:
+  - title: "Overview"
+    url: "index.md"
+  - title: "Registry"
+    url: "registry.md"
+  - title: "Architecture"
+    url: "architecture.md"
+  - title: "Rituals"
+    url: "rituals.md"
+  - title: "Skeletton™"
+    url: "skeletton.md"
+  - title: "Audit"
+    url: "audit.md"
+
+# Optional Branding
+logo: "/assets/logo.png"
+favicon: "/assets/favicon.ico"
+
+# Enable search
+search_enabled: true
