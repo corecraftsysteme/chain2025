@@ -1,8 +1,3 @@
-Wenn du **`docs/registry.md`** öffnest und YAML‑Fehler bekommst, dann liegt das nicht an der Datei selbst, sondern daran, **dass ein YAML‑Parser versucht, sie zu interpretieren**, obwohl es eine **Markdown‑Datei** ist.
-
-Markdown ist **kein YAML**.  
-Wenn irgendein Tool, Script oder Frontmatter‑Parser versucht, die Datei als YAML zu lesen, entsteht genau dieser Fehler:
-```markdown
 # 📡 Chain2025 Registry – Audit‑Sealed Asset Graph
 
 Die Chain2025‑Registry ist das zentrale, audit‑taugliche Verzeichnis aller technischen, narrativen und rituellen Artefakte.  
