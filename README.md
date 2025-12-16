@@ -50,12 +50,6 @@ Each script represents a ritualized step in Daniel Aecherli’s Genesis Liberati
 
 ---
 
-```mermaid
-graph TD
-    SW-001 --> DOC-010
-    DOC-010((DOC-010))
----
-
 ## 🧪 Usage
 
 Run scripts via shell or integrate into your CLI console.  
@@ -89,5 +83,10 @@ Skeletton™ sport and mythic infrastructure licensed under Archneton License v1
 🧠 Ritual Tags
 #Chain2025 #GenesisLiberation #AuditDrift #SkelettonSport
 #EchoArtifact #ChainRitualFramework #ArchnetonLicense #ChronikClosure
+
+```mermaid
+graph TD
+    SW-001 --> DOC-010
+    DOC-010((DOC-010))
 
 
