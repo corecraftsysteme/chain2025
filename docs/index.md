@@ -1,9 +1,11 @@
-# 📘 **docs/index.md**
-
-```markdown
 # 🪬 Chain2025 Documentation Hub
 
-Willkommen im Dokumentationszentrum des **Chain2025 – Genesis Liberation Protocol**.  
+**Navigation:**  
+[Registry](registry.md) • [Architecture](architecture.md) • [Rituals](rituals.md) • [Skeletton](skeletton.md) • [Audit](audit.md)
+
+Willkommen im Dokumentationszentrum des Chain2025 – Genesis Liberation Protocol.  
+...
+
 Dieses System verbindet technische Infrastruktur, narrative Chronik, rituelle Ausführung und audit‑versiegelte Artefakte zu einem kohärenten, reproduzierbaren Ökosystem.
 
 Diese Dokumentation ist modular aufgebaut und führt durch alle Schichten des Systems.
