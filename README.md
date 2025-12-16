@@ -1,3 +1,10 @@
+```mermaid 
+graph TD
+   SW-001 --> DOC-010
+   DOC-010((DOC-010))```
+
+---
+
 - 🛰️ Skeletton™ – Satellite Drift-Ritual Sport
 - 🧿 Chain Ritual Framework – Modular Ritual Engine for Genesis Events
 
@@ -84,9 +91,6 @@ Skeletton™ sport and mythic infrastructure licensed under Archneton License v1
 #Chain2025 #GenesisLiberation #AuditDrift #SkelettonSport
 #EchoArtifact #ChainRitualFramework #ArchnetonLicense #ChronikClosure
 
-```mermaid
-graph TD
-    SW-001 --> DOC-010
-    DOC-010((DOC-010))```
+
 
 
