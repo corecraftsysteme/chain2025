@@ -1,6 +1,9 @@
 title: "Chain2025 Documentation"
-description: "Audit-sealed documentation for the Chain2025 Genesis Liberation Protocol"
+description: "Audit-sealed documentation for the Genesis Liberation Protocol"
 theme: "just-the-docs"
+
+logo: "/assets/corecraft-logo.png"
+favicon: "/assets/favicon.ico"
 
 # GitHub Pages settings
 baseurl: "/"
