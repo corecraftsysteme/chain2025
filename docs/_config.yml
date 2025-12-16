@@ -5,6 +5,12 @@ theme: "just-the-docs"
 logo: "/assets/corecraft-logo.png"
 favicon: "/assets/favicon.ico"
 
+color_scheme: "corecraft"
+
+mermaid:
+  theme: dark
+
+
 # GitHub Pages settings
 baseurl: "/"
 url: "https://<DEIN-GITHUB-USERNAME>.github.io/<DEIN-REPO>"
