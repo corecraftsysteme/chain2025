@@ -36,3 +36,6 @@ favicon: "/assets/favicon.ico"
 
 # Enable search
 search_enabled: true
+
+footer_content: "Validator‑signierte Dokumentation • CoreCraft Systems • Chain2025"
+
