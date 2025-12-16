@@ -87,6 +87,6 @@ Skeletton™ sport and mythic infrastructure licensed under Archneton License v1
 ```mermaid
 graph TD
     SW-001 --> DOC-010
-    DOC-010((DOC-010))
+    DOC-010((DOC-010))```
 
 
