@@ -1,40 +1,59 @@
 
 ---
 
-# # 🪬 Chain2025 – Genesis Liberation Protocol  
-**Audit‑sealed infrastructure for symbolic & real payout events**  
-**Version:** 1.0.0  
-**Author:** Daniel Aecherli (M.O.D.S.)  
-**License:** MIT / CC0 (Code), Archneton License v1.0 (Skeletton™)
+# 🪬 **README.md — Chain2025 – Genesis Liberation Protocol**  
+### *Audit‑sealed infrastructure for symbolic and real payout events*
 
 ---
 
-## 1. System Essence
-Chain2025 ist eine hybride mythologisch‑technische Infrastruktur, die reale und symbolische Ereignisse in audit‑taugliche, reproduzierbare Abläufe transformiert.
+## 🏷️ **Badges**
 
-**Chain2025 ist:**
-- ein **Genesis‑Block‑System** (ChainId 2025)  
-- ein **Ritual‑Framework** für Auszahlungen & Closure  
-- ein **audit‑versiegeltes Artefakt‑Ökosystem**  
-- ein **Agenten‑ und Rollen‑System**  
-- ein **Chronik‑ und Echo‑Framework**  
-- eine **Skeletton™ Drift‑Sport‑Integration**  
+Diese Badges sind rein symbolisch‑rituell — sie markieren Status, Herkunft und Lizenz:
 
-**Jeder technische Schritt = Ritual.**  
-**Jede Auszahlung = Closure.**  
-**Jede Genesis = Schwelle.**
+```
+![Status](https://img.shields.io/badge/Status-Genesis_Active-6f42c1)
+![ChainID](https://img.shields.io/badge/ChainID-2025-blue)
+![Audit](https://img.shields.io/badge/Audit-Sealed-green)
+![Ritual](https://img.shields.io/badge/Ritual-Framework-orange)
+![License](https://img.shields.io/badge/License-Archneton_v1.0-red)
+```
 
 ---
 
-## 2. Registry Overview
+## 🪬 **1. System‑Essenz**
 
-### ASCII‑Graph
+Chain2025 ist:
+
+- 🔗 ein **Genesis‑Block‑System** (ChainId 2025)  
+- 🜂 eine **mythologisch‑technische Infrastruktur**  
+- 🕯️ ein **Ritual‑Framework** für reale und symbolische Auszahlungen  
+- 🧿 ein **audit‑versiegeltes Artefakt‑Ökosystem**  
+- 🧩 ein **Agenten‑ und Rollen‑System**  
+- 📜 ein **Chronik‑ und Echo‑Framework**  
+- 🌀 eine **Skeletton™ Drift‑Sport‑Integration**
+
+**Jeder technische Schritt = Ritual.  
+Jede Auszahlung = Closure.  
+Jede Genesis = Schwelle.**
+
+---
+
+## 🗂️ **2. Registry Overview**
+
+### **ASCII‑Graph**
 ```
 SW-001 ──▶ DOC-010
 DOC-010 ──▶ (none)
 ```
 
-### JSON‑Graph
+### **Mermaid‑Diagramm**
+```mermaid
+graph TD
+    SW001["SW‑001"] --> DOC010["DOC‑010"]
+    DOC010 --> NONE["(none)"]
+```
+
+### **JSON‑Graph**
 ```json
 {
   "nodes": ["SW-001", "DOC-010"],
@@ -44,62 +63,63 @@ DOC-010 ──▶ (none)
 
 ---
 
-## 3. Philosophy
-**Technik = Ritual**  
-**Genesis = Ursprung**  
-**Auszahlung = Befreiung**  
-**Chronik = audit‑taugliches Narrativ**  
-**Struktur = Klarheit**  
-**Echo = Bindung**
+## 🧠 **3. Philosophie**
+
+- ⚙️ **Technik = Ritual**  
+- 🌑 **Genesis = Ursprung**  
+- 💸 **Auszahlung = Befreiung**  
+- 📖 **Chronik = audit‑taugliches Narrativ**  
+- 🧱 **Struktur = Klarheit**  
+- 🔮 **Echo = Bindung**
 
 Chain2025 transformiert Reibung in Form —  
 und verbindet mythische Struktur mit rechtlicher Präzision.
 
 ---
 
-## 4. Module Structure
+## 🧩 **4. Modul‑Struktur**
 
-### `genesis/`
+### **genesis/**
 - Origin‑Block‑Konfiguration  
 - Validator‑Signaturen  
 - ChainID‑Definition  
 
-### `bridge/`
+### **bridge/**
 - RPC‑Deployment  
 - Asset‑Mirroring  
 - Chain‑Bridging  
 
-### `payouts/`
+### **payouts/**
 - YAML‑basierte Auszahlungslogs  
 - audit‑taugliche Closure‑Dokumente  
 
-### `chronik/`
+### **chronik/**
 - Markdown‑Chroniken  
 - FLOP‑Signals  
 - Ritual‑Dokumentation  
 
-### `agents/`
+### **agents/**
 - Archetypische Agenten  
 - Rollen  
 - Validator‑Definitionen  
 
-### `wallet/`
+### **wallet/**
 - Wallet‑Erzeugung  
 - Transfer‑Logs  
 - Withdrawal‑Tracking  
 
-### `scripts/`
+### **scripts/**
 - CLI‑Routinen für Ritual‑Ausführung  
 - Genesis‑Trigger  
 - Payout‑Trigger  
 
-### `skeletton/`
+### **skeletton/**
 - Satellite Drift‑Rituale  
 - Echo‑Kits  
 - Driftpoint‑Registrierung  
 - Tempel‑Module  
 
-### `rituals/`
+### **rituals/**
 - Chain Ritual Framework  
 - modulare Genesis‑Rituale  
 - Validator‑Closure‑Rituale  
@@ -107,7 +127,7 @@ und verbindet mythische Struktur mit rechtlicher Präzision.
 
 ---
 
-## 5. Key Scripts
+## 🛠️ **5. Wichtige Skripte**
 
 | Script | Funktion |
 |--------|----------|
@@ -123,15 +143,17 @@ und verbindet mythische Struktur mit rechtlicher Präzision.
 
 ---
 
-## 6. Skeletton™ Integration
-Skeletton™ ist ein:
+## 🛰️ **6. Skeletton™ Integration**
 
-- Satellite Drift‑Ritual Sport  
-- Echo‑basiertes Closure‑System  
-- Validator‑gebunden  
-- audit‑versiegelt  
+Skeletton™ ist:
 
-**Wichtige Dateien:**
+- ein **Satellite Drift‑Ritual Sport**  
+- ein **Echo‑basiertes Closure‑System**  
+- **Validator‑gebunden**  
+- **audit‑versiegelt**
+
+### Wichtige Dateien:
+
 - `skeletton/drift_manifest.txt`  
 - `skeletton/echo26.md`  
 - `skeletton/license.txt`  
@@ -139,15 +161,17 @@ Skeletton™ ist ein:
 
 ---
 
-## 7. Chain Ritual Framework
-Das Ritual‑Framework ermöglicht:
+## 🔱 **7. Chain Ritual Framework**
+
+Ermöglicht:
 
 - modulare Genesis‑Ereignisse  
 - Validator‑gesteuerte Closure‑Rituale  
 - symbolische Chain‑Trigger  
 - chronikgebundene Echo‑Logs  
 
-**Wichtige Dateien:**
+### Wichtige Dateien:
+
 - `rituals/ritual_trigger.sh`  
 - `rituals/ritual_manifest.md`  
 - `rituals/ritual_index.html`  
@@ -155,9 +179,8 @@ Das Ritual‑Framework ermöglicht:
 
 ---
 
-## 8. Usage
+## 🧪 **8. Usage**
 
-### CLI‑Beispiele
 ```bash
 bash scripts/freikauf.sh
 python wallet/send_eth_chainid2025.py
@@ -165,24 +188,23 @@ bash rituals/ritual_trigger.sh
 python skeletton/driftpoint_register.py
 ```
 
-**Voraussetzungen:**
-- aktiver RPC‑Endpoint  
-- initialisierte Wallet‑Module  
+**RPC‑Endpoint und Wallet‑Module müssen aktiv sein.**
 
 ---
 
-## 9. Licensing
+## 📜 **9. Lizenzierung**
+
 - **Code:** MIT oder CC0  
 - **Skeletton™:** Archneton License v1.0  
-- **Autor:** Daniel Aecherli (M.O.D.S.)
+- **Autor:** Daniel Aecherli (M.O.D.S.)  
 
 ---
 
-## 10. Ritual Tags
+## 🧿 **10. Ritual Tags**
+
 ```
 #Chain2025 #GenesisLiberation #AuditDrift #SkelettonSport
 #EchoArtifact #ChainRitualFramework #ArchnetonLicense #ChronikClosure
 ```
 
 ---
-
