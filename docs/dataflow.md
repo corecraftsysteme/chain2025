@@ -114,4 +114,4 @@ Der Chain2025‑Dataflow zeigt:
 
 Chain2025 ist ein **Artefakt‑Ökosystem**, in dem Daten nicht nur technisch, sondern auch rituell Bedeutung tragen.
 
-```
+
