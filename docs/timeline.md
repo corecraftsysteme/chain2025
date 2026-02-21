@@ -140,9 +140,5 @@ Die Chain2025‑Timeline zeigt:
 Chain2025 ist nicht nur ein technisches System —  
 es ist ein **Ritual‑Ökosystem**, das Genesis, Wert, Echo und Closure verbindet.
 
-```
-
----
-
 
 
