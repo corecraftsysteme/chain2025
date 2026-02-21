@@ -217,5 +217,3 @@ Sie sind die **rituellen Leitbahnen**, die Chain2025 lebendig machen.
 # 🧠 Tags
 
 `#Chain2025 #RitualEngine #GenesisRitual #ClosureRitual #EchoLog #Chronik #Validator #AuditDrift #Skeletton`
-
-```
