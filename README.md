@@ -127,16 +127,15 @@ ritual_trigger.sh	Aktiviert modulare Chain‑Rituale
 6. Skeletton™ Integration
 Skeletton™ ist:
 
-Satellite Drift‑Ritual Sport
+ein Satellite Drift‑Ritual Sport
 
-Echo‑basiertes Closure‑System
+ein Echo‑basiertes Closure‑System
 
 Validator‑gebunden
 
 audit‑versiegelt
 
 Wichtige Dateien:
-
 drift_manifest.txt
 
 echo26.md
@@ -157,7 +156,6 @@ symbolische Chain‑Trigger
 chronikgebundene Echo‑Logs
 
 Wichtige Dateien:
-
 ritual_trigger.sh
 
 ritual_manifest.md
@@ -167,7 +165,7 @@ ritual_index.html
 echo_registry.yaml
 
 8. Usage
-Code
+bash
 bash scripts/freikauf.sh
 python wallet/send_eth_chainid2025.py
 bash rituals/ritual_trigger.sh
