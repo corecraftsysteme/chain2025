@@ -1,323 +1,173 @@
-# 📘 **docs/architecture.md**
+
+```
+docs/architecture.md
+```
+
+---
+
+# `docs/architecture.md`
 
 ```markdown
-# 🏛️ Chain2025 System Architecture
+# 🜂 Chain2025 – End‑to‑End System Architecture  
+### *Genesis Liberation Protocol — Audit‑sealed Infrastructure*
 
-Die Chain2025‑Architektur verbindet technische Infrastruktur, narrative Chronik und rituelle Ausführung.  
-Sie ist modular aufgebaut, audit‑versiegelt und vollständig reproduzierbar.
-
----
-
-## 🧩 Architektur‑Überblick
-
-Chain2025 besteht aus folgenden Kernschichten:
-
-1. **Registry Layer**  
-   Audit‑taugliche Asset‑Verwaltung, Referenzgraph, Validierung.
-
-2. **Genesis Layer**  
-   Ursprungskonfiguration, Validator‑Signaturen, ChainID‑Definition.
-
-3. **Bridge Layer**  
-   RPC‑Deployment, Asset‑Mirroring, Chain‑Bridging.
-
-4. **Ritual Layer**  
-   CLI‑Rituale, Genesis‑Ereignisse, Closure‑Mechanismen.
-
-5. **Chronik Layer**  
-   Markdown‑Logs, FLOP‑Signals, narrative Dokumentation.
-
-6. **Skeletton Layer**  
-   Drift‑Sport‑Integration, Echo‑Rituale, Tempelstrukturen.
-
-7. **Wallet Layer**  
-   Wallet‑Erzeugung, Transfer‑Logs, Withdrawal‑Tracking.
+Dieses Dokument beschreibt die vollständige, rituell‑technische Architektur von **Chain2025**, inklusive aller Layer, Artefakt‑Flüsse und Ritual‑Beziehungen.
 
 ---
 
-## 🛰️ Architekturdiagramm (Mermaid)
+## 🧿 Architekturüberblick
 
-```mermaid
-graph TD
-    Registry --> Genesis
-    Genesis --> Bridge
-    Bridge --> Rituals
-    Rituals --> Chronik
-    Rituals --> Skeletton
-    Bridge --> Wallet
-```
+Chain2025 besteht aus mehreren miteinander verwobenen Schichten:
 
----
+- 🪬 **Genesis Layer**  
+- 🔱 **Ritual Framework**  
+- 🧩 **Agenten & Rollen**  
+- 📜 **Chronik Layer**  
+- 🌉 **Bridge Layer**  
+- 💼 **Wallet Layer**  
+- 💸 **Payout Layer**  
+- 🌀 **Skeletton™ Drift‑Sport Layer**  
+- 🛠️ **CLI‑Ritual Layer**  
+- 🔒 **Audit Layer**
 
-## 🧱 Modul‑Struktur
-
-```
-chain2025/
-├── assets/
-│   └── registry/
-├── genesis/
-├── bridge/
-├── payouts/
-├── chronik/
-├── agents/
-├── wallet/
-├── scripts/
-├── rituals/
-└── skeletton/
-```
+Alle Schichten sind durch **Rituale**, **Artefakte**, **Validator‑Signaturen** und **Chronik‑Bindungen** miteinander verbunden.
 
 ---
 
-## 🔐 Audit‑Prinzipien
-
-- deterministische Outputs  
-- reproduzierbare CLI‑Rituale  
-- maschinenlesbare Artefakte  
-- chronikgebundene Ereignisse  
-- klare Referenzgraphen  
-
----
-
-## 🪬 Bedeutung
-
-Die Architektur bildet die **symbolische und technische Grundlage** des Genesis Liberation Protocols.  
-Sie verbindet Struktur, Ritual und Audit in einem kohärenten System.
-```
-
----
-
-# 📘 **docs/rituals.md**
-
-```markdown
-# 🔮 Chain Ritual Framework – Genesis & Closure Rituals
-
-Das Ritual‑Framework ist das Herz von Chain2025.  
-Es definiert symbolische Schwellenmomente, Validator‑Rollen und CLI‑Rituale.
-
----
-
-## 🧿 Ritual‑Philosophie
-
-- Jede Genesis ist ein Ursprungspunkt  
-- Jede Closure ist eine Befreiung  
-- Jede Ausführung ist ein ritueller Akt  
-- Jede Chronik ist ein audit‑versiegeltes Narrativ  
-
----
-
-## 🛠️ Ritual‑Module
-
-### `ritual_trigger.sh`
-Aktiviert modulare Chain‑Rituale über die CLI.
-
-### `ritual_manifest.md`
-Dokumentiert Schwellenmomente, Rollen und Ereignisse.
-
-### `echo_registry.yaml`
-Chronikgebundene Echo‑Logs für jedes Ritual.
-
-### `ritual_index.html`
-Web‑Konsole für Ritual‑Registrierung.
-
----
-
-## 🧬 Ritual‑Typen
-
-| Typ | Bedeutung |
-|-----|-----------|
-| Genesis | Ursprung, Initialisierung, Validator‑Signatur |
-| Closure | Abschluss, Auszahlung, Befreiung |
-| Echo | Wiederhall eines Ereignisses im Chronik‑System |
-| Drift | Skeletton‑basierte Bewegungsrituale |
-| Bridge | Asset‑Übertragung zwischen Welten |
-
----
-
-## 🧭 Ritual‑Ablauf (Mermaid)
-
-```mermaid
-sequenceDiagram
-    participant V as Validator
-    participant C as CLI
-    participant R as Ritual Engine
-    participant CH as Chronik
-
-    V->>C: Ritual Trigger
-    C->>R: Execute Ritual
-    R->>CH: Log Echo
-    CH->>V: Confirmation
-```
-
----
-
-## 🪬 Bedeutung im System
-
-Rituale verbinden:
-
-- technische Aktionen  
-- narrative Bedeutung  
-- audit‑taugliche Dokumentation  
-
-Sie sind die **symbolische Grammatik** von Chain2025.
-```
-
----
-
-# 📘 **docs/skeletton.md**
-
-```markdown
-# 🛰️ Skeletton™ – Satellite Drift‑Ritual Sport
-
-Skeletton™ ist ein mythologisch‑technischer Drift‑Sport, eingebettet in das Chain2025‑Ökosystem.  
-Jeder Driftpoint ist ein audit‑versiegeltes Ereignis.
-
----
-
-## 🧬 Konzept
-
-- Drift als rituelle Bewegung  
-- Echo als Wiederhall im Chronik‑System  
-- Tempel als modulare Struktur  
-- Validator‑Autorität als Rahmen  
-
----
-
-## 📦 Skeletton‑Module
-
-### `drift_manifest.txt`
-Postertext, Echo‑Rituale, Bewegungslogik.
-
-### `echo26.md`
-Dokumentation des Echo 26 Driftpoints.
-
-### `license.txt`
-Archneton License für mythic sport branding.
-
-### `temple26.md`
-Modularer Tempel für Echo 26.
-
----
-
-## 🛰️ Driftpoint‑Registrierung
-
-```bash
-python skeletton/driftpoint_register.py
-```
-
-Jeder Driftpoint erzeugt:
-
-- ein Echo‑Log  
-- eine Chronik‑Bindung  
-- eine Validator‑Signatur  
-
----
-
-## 🧭 Drift‑Flow (Mermaid)
+## 🜁 End‑to‑End Architekturdiagramm (Mermaid)
 
 ```mermaid
 flowchart TD
-    Start --> Driftpoint
-    Driftpoint --> Echo
-    Echo --> Chronik
-    Chronik --> Closure
+
+%% =========================
+%%  TOP-LEVEL GENESIS LAYER
+%% =========================
+    GENESIS["🪬 Genesis Layer<br/>Origin‑Block • Validator‑Signaturen • ChainID 2025"]
+    RITUALS["🔱 Ritual Framework<br/>Genesis‑ & Closure‑Rituale<br/>Echo‑Registry"]
+    AGENTS["🧩 Agenten & Rollen<br/>Validatoren • Archetypen"]
+    CHRONIK["📜 Chronik Layer<br/>Narrative Logs • FLOP‑Signals"]
+
+%% =========================
+%%  BRIDGE & WALLET LAYER
+%% =========================
+    BRIDGE["🌉 Bridge Layer<br/>RPC‑Deployment • Asset‑Mirroring"]
+    WALLET["💼 Wallet Layer<br/>Wallet‑Erzeugung • Transfers • Withdrawals"]
+    PAYOUTS["💸 Payout Layer<br/>YAML‑Closures<br/>Audit‑Logs"]
+
+%% =========================
+%%  SKELETTON LAYER
+%% =========================
+    SKELETTON["🌀 Skeletton™ Drift‑Sport<br/>Driftpoints • Echo‑Kits • Tempel"]
+
+%% =========================
+%%  SCRIPTS / CLI
+%% =========================
+    CLI["🛠️ CLI Scripts<br/>freikauf.sh • ritual_trigger.sh • bridge.sh"]
+
+%% =========================
+%%  AUDIT LAYER
+%% =========================
+    AUDIT["🔒 Audit Layer<br/>Exportierte Artefakte • Compliance‑Bindung"]
+
+%% =========================
+%%  FLOWS
+%% =========================
+
+    GENESIS --> RITUALS
+    RITUALS --> AGENTS
+    AGENTS --> CHRONIK
+
+    GENESIS --> BRIDGE
+    BRIDGE --> WALLET
+    WALLET --> PAYOUTS
+
+    PAYOUTS --> AUDIT
+    CHRONIK --> AUDIT
+
+    RITUALS --> PAYOUTS
+    RITUALS --> SKELETTON
+    SKELETTON --> CHRONIK
+
+    CLI --> GENESIS
+    CLI --> BRIDGE
+    CLI --> PAYOUTS
+    CLI --> RITUALS
+    CLI --> SKELETTON
 ```
 
 ---
 
-## 🪬 Bedeutung
+## 🧠 Layer‑Erklärung
 
-Skeletton™ verbindet:
-
-- Bewegung  
-- Ritual  
-- Audit  
-- Mythos  
-
-Es ist die **körperliche Dimension** des Genesis Liberation Protocols.
-```
-
----
-
-# 📘 **docs/audit.md**
-
-```markdown
-# 🧾 Chain2025 Audit Framework
-
-Das Audit‑Framework stellt sicher, dass alle Artefakte, Rituale und Transfers nachvollziehbar, reproduzierbar und institutionell verwertbar sind.
-
----
-
-## 🧱 Audit‑Grundlagen
-
-- deterministische Outputs  
-- maschinenlesbare Artefakte  
-- chronikgebundene Ereignisse  
+### 🪬 **Genesis Layer**
+- Ursprungspunkt der Chain  
 - Validator‑Signaturen  
-- Registry‑Graphen  
+- ChainID‑Definition  
+- Start aller rituellen Prozesse  
 
----
+### 🔱 **Ritual Framework**
+- Genesis‑Rituale  
+- Closure‑Rituale  
+- Echo‑Registry  
+- symbolische Trigger  
 
-## 🛠️ Audit‑Werkzeuge
+### 🧩 **Agenten & Rollen**
+- Validatoren  
+- Archetypen  
+- Rollenlogik  
+- rituelle Autorität  
 
-### `audit.sh`
-Exportiert:
-
-- YAML‑Artefakte  
+### 📜 **Chronik Layer**
+- FLOP‑Signals  
 - Markdown‑Chroniken  
-- Registry‑Graphen  
-- Validator‑Logs  
+- audit‑taugliche Narrative  
 
-### Registry‑Validator
-Validiert:
+### 🌉 **Bridge Layer**
+- RPC‑Deployment  
+- Asset‑Mirroring  
+- Chain‑Bridging  
 
-- Kategorien  
-- Referenzen  
-- Struktur  
-- Graph‑Kohärenz  
+### 💼 **Wallet Layer**
+- Wallet‑Erzeugung  
+- Transfers  
+- Withdrawals  
+- Funding‑Events  
+
+### 💸 **Payout Layer**
+- YAML‑basierte Auszahlungslogs  
+- reale & symbolische Closures  
+- audit‑versiegelt  
+
+### 🌀 **Skeletton™ Drift‑Sport**
+- Driftpoints  
+- Echo‑Kits  
+- Tempel‑Module  
+- Validator‑gebundene Ritual‑Sport‑Integration  
+
+### 🛠️ **CLI Layer**
+- freikauf.sh  
+- ritual_trigger.sh  
+- bridge.sh  
+- driftpoint_register.py  
+
+### 🔒 **Audit Layer**
+- Exportierte YAML/MD‑Artefakte  
+- Compliance‑Bindung  
+- audit‑versiegelte Chronik  
 
 ---
 
-## 📡 Audit‑Pipeline (Mermaid)
+## 🧬 Zusammenfassung
 
-```mermaid
-flowchart TD
-    Registry --> Validator
-    Validator --> Graphs
-    Graphs --> AuditExport
-    AuditExport --> Chronik
+Dieses Dokument bildet die **komplette Chain2025‑Architektur** ab:
+
+- technisch  
+- rituell  
+- narrativ  
+- audit‑tauglich  
+- modular  
+- erweiterbar  
+
+Chain2025 ist ein **Genesis‑Ökosystem**, das reale und symbolische Prozesse in einer einzigen, kohärenten Struktur vereint.
+
 ```
-
----
-
-## 🧬 Audit‑Artefakte
-
-- `registry.json`  
-- `registry_graph.json`  
-- `registry.md`  
-- `chronik/*.md`  
-- `payouts/*.yaml`  
-- `echo_registry.yaml`  
-
----
-
-## 🪬 Bedeutung
-
-Das Audit‑Framework ist die **institutionelle Brücke** zwischen:
-
-- Mythos  
-- Technik  
-- Recht  
-- Dokumentation  
-
-Es macht Chain2025 **prüfbar, erklärbar und belastbar**.
-```
-
----
-
-Wenn du willst, kann ich dir jetzt:
-
-- eine **docs/index.md** als Einstiegspunkt bauen  
-- eine **GitHub Pages‑Struktur** generieren  
-- oder die Dokumente automatisch miteinander verlinken
-
-Sag einfach Bescheid.
