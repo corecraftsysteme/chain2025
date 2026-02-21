@@ -1,3 +1,13 @@
+
+```
+docs/timeline.md
+```
+
+---
+
+# `docs/timeline.md`
+
+```markdown
 # 🕰️ Chain2025 – Ritual Timeline  
 ### *Genesis Liberation Protocol — Chronologische Abfolge der rituell‑technischen Prozesse*
 
@@ -51,6 +61,7 @@ timeline
         Audit‑Export : YAML/MD Artefakte werden versiegelt
         Compliance‑Bindung : Abschluss des Genesis Liberation Protocol
         Ritual‑Finalisierung : Genesis → Payout → Echo wird geschlossen
+```
 
 ---
 
@@ -130,6 +141,8 @@ Chain2025 ist nicht nur ein technisches System —
 es ist ein **Ritual‑Ökosystem**, das Genesis, Wert, Echo und Closure verbindet.
 
 ```
+
+---
 
 
 
