@@ -1,5 +1,4 @@
 
----
 
 # `docs/architecture.md`
 
@@ -89,7 +88,6 @@ flowchart TD
     CLI --> PAYOUTS
     CLI --> RITUALS
     CLI --> SKELETTON
-```
 
 ---
 
