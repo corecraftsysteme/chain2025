@@ -48,62 +48,60 @@ DOC-010 ──▶ (none)
 
 ### **Mermaid‑Diagramm**
 ```mermaid
-flowchart TD
+sequenceDiagram
+    autonumber
 
-%% =========================
-%%  TOP-LEVEL GENESIS LAYER
-%% =========================
-    GENESIS["🪬 Genesis Layer<br/>Origin‑Block • Validator‑Signaturen • ChainID 2025"]
-    RITUALS["🔱 Ritual Framework<br/>Genesis‑ & Closure‑Rituale<br/>Echo‑Registry"]
-    AGENTS["🧩 Agenten & Rollen<br/>Validatoren • Archetypen"]
-    CHRONIK["📜 Chronik Layer<br/>Narrative Logs • FLOP‑Signals"]
+    participant U as 🧑‍💼 User / Operator
+    participant CLI as 🛠️ CLI‑Ritual (freikauf.sh / ritual_trigger.sh)
+    participant GEN as 🪬 Genesis Layer<br/>Origin‑Block • Validator‑Signaturen
+    participant AG as 🧩 Agenten & Rollen<br/>Validatoren • Archetypen
+    participant BR as 🌉 Bridge Layer<br/>RPC • Asset‑Mirroring
+    participant WA as 💼 Wallet Layer<br/>Wallet‑Erzeugung • Transfers
+    participant PO as 💸 Payout Layer<br/>YAML‑Closures
+    participant CH as 📜 Chronik Layer<br/>Narrative Logs • FLOP‑Signals
+    participant EC as 🔮 Echo Layer<br/>Echo‑Registry • Driftpoints
 
-%% =========================
-%%  BRIDGE & WALLET LAYER
-%% =========================
-    BRIDGE["🌉 Bridge Layer<br/>RPC‑Deployment • Asset‑Mirroring"]
-    WALLET["💼 Wallet Layer<br/>Wallet‑Erzeugung • Transfers • Withdrawals"]
-    PAYOUTS["💸 Payout Layer<br/>YAML‑Logs • Audit‑Closures"]
+    %% ============================
+    %%  GENESIS PHASE
+    %% ============================
 
-%% =========================
-%%  SKELETTON LAYER
-%% =========================
-    SKELETTON["🌀 Skeletton™ Drift‑Sport<br/>Driftpoints • Echo‑Kits • Tempel"]
+    U->>CLI: Startet Genesis‑Ritual<br/>`ritual_trigger.sh genesis`
+    CLI->>GEN: Initialisiert Genesis‑Block<br/>ChainID 2025
+    GEN->>AG: Aktiviert Validator‑Rollen<br/>Signaturen • Archetypen
+    AG->>CH: Erzeugt Genesis‑Chronik<br/>audit‑taugliche Narrative
 
-%% =========================
-%%  SCRIPTS / CLI
-%% =========================
-    CLI["🛠️ CLI Scripts<br/>freikauf.sh • ritual_trigger.sh • bridge.sh"]
+    %% ============================
+    %%  BRIDGE / WALLET PHASE
+    %% ============================
 
-%% =========================
-%%  AUDIT LAYER
-%% =========================
-    AUDIT["🔒 Audit Layer<br/>Exportierte Artefakte • Compliance‑Bindung"]
+    U->>CLI: Startet Bridge‑Ritual<br/>`bridge.sh`
+    CLI->>BR: RPC‑Deployment • Asset‑Mirroring
+    BR->>WA: Wallet‑Erzeugung • Funding
+    WA->>CH: Wallet‑Events → Chronik
 
-%% =========================
-%%  FLOWS
-%% =========================
+    %% ============================
+    %%  PAYOUT PHASE
+    %% ============================
 
-    GENESIS --> RITUALS
-    RITUALS --> AGENTS
-    AGENTS --> CHRONIK
+    U->>CLI: Führt Freikauf‑Ritual aus<br/>`freikauf.sh`
+    CLI->>WA: Transfer → Auszahlung
+    WA->>PO: Erzeugt Payout‑YAML<br/>audit‑sealed Closure
+    PO->>CH: Payout‑Narrativ → Chronik
 
-    GENESIS --> BRIDGE
-    BRIDGE --> WALLET
-    WALLET --> PAYOUTS
+    %% ============================
+    %%  ECHO PHASE
+    %% ============================
 
-    PAYOUTS --> AUDIT
-    CHRONIK --> AUDIT
+    U->>CLI: Aktiviert Echo‑Ritual<br/>`ritual_trigger.sh echo`
+    CLI->>EC: Registriert Echo‑Event<br/>Driftpoint • Closure‑Signal
+    EC->>CH: Echo‑Bindung → Chronik
 
-    RITUALS --> PAYOUTS
-    RITUALS --> SKELETTON
-    SKELETTON --> CHRONIK
+    %% ============================
+    %%  FINALISIERUNG
+    %% ============================
 
-    CLI --> GENESIS
-    CLI --> BRIDGE
-    CLI --> PAYOUTS
-    CLI --> RITUALS
-    CLI --> SKELETTON
+    CH->>U: Vollständige Ritual‑Chronik<br/>Genesis → Payout → Echo
+
 
 ```
 
