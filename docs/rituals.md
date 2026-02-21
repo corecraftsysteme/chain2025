@@ -1,52 +1,42 @@
-**Navigation:**  
-[Index](index.md) • [Registry](registry.md) • [Architecture](architecture.md) • [Skeletton](skeletton.md) • [Audit](audit.md)
+# 🔮 Chain2025 – Ritual Documentation  
+### *Genesis Liberation Protocol — Rituelle Engine & Schwellenmechanik*
 
-# 🔮 Chain Ritual Framework – Genesis & Closure Rituals
-...
-[⬅️ Zurück zur Übersicht](index.md)
+Dieses Dokument beschreibt alle **Rituale**, **Schwellenmomente**, **Validator‑Interaktionen** und **Artefakt‑Erzeugungen** innerhalb des Chain2025‑Ökosystems.
 
-```markdown
-# 🔮 Chain Ritual Framework – Genesis & Closure Rituals
-
-Das Chain Ritual Framework ist das rituelle Herz von Chain2025.  
-Es verbindet technische Aktionen mit symbolischen Schwellenmomenten, Validator‑Rollen und chronikgebundenen Ereignissen.
-
-Jedes Ritual ist ein audit‑versiegelter Akt, der sowohl technische als auch narrative Bedeutung trägt.
+Rituale sind die **symbolische Grammatik** von Chain2025:  
+Sie verbinden technische Aktionen mit narrativer Bedeutung, audit‑tauglicher Dokumentation und Validator‑Autorität.
 
 ---
 
-## 🧿 Ritual‑Philosophie
+# 🧿 1. Ritual‑Philosophie
 
-- Jede Genesis ist ein Ursprungspunkt  
-- Jede Closure ist eine Befreiung  
-- Jede Ausführung ist ein ritueller Akt  
-- Jede Chronik ist ein audit‑versiegeltes Narrativ  
-- Jeder Validator ist ein Hüter der Schwelle  
+- Jede **Genesis** ist ein Ursprungspunkt  
+- Jede **Closure** ist eine Befreiung  
+- Jede **Ausführung** ist ein ritueller Akt  
+- Jede **Chronik** ist ein audit‑versiegeltes Narrativ  
+- Jeder **Validator** ist ein Hüter der Schwelle  
+- Jedes **Echo** ist die Bindung eines Ereignisses an die Zeit  
 
-Rituale sind die **symbolische Grammatik** von Chain2025.
-
----
-
-## 🛠️ Ritual‑Module
-
-### `ritual_trigger.sh`
-CLI‑Skript zur Aktivierung modularer Chain‑Rituale.
-
-### `ritual_manifest.md`
-Dokumentiert Schwellenmomente, Rollen, Ereignisse und Validator‑Beteiligung.
-
-### `echo_registry.yaml`
-Chronikgebundene Echo‑Logs für jedes Ritualereignis.
-
-### `ritual_index.html`
-Web‑Konsole zur Registrierung und Visualisierung von Ritualen.
+Rituale sind die **rituellen Nervenbahnen** von Chain2025.
 
 ---
 
-## 🧬 Ritual‑Typen
+# 🛠️ 2. Ritual‑Module
 
-| Typ       | Bedeutung |
-|-----------|-----------|
+| Datei | Funktion |
+|-------|----------|
+| `ritual_trigger.sh` | Aktiviert modulare Chain‑Rituale über die CLI |
+| `ritual_manifest.md` | Dokumentiert Schwellenmomente, Rollen, Ereignisse |
+| `echo_registry.yaml` | Chronikgebundene Echo‑Logs |
+| `ritual_index.html` | Web‑Konsole zur Visualisierung von Ritualen |
+| `closure_manifest.yaml` | Audit‑taugliche Dokumentation abgeschlossener Rituale |
+
+---
+
+# 🧬 3. Ritual‑Typen
+
+| Typ | Bedeutung |
+|------|-----------|
 | **Genesis** | Ursprung, Initialisierung, Validator‑Signatur |
 | **Closure** | Abschluss, Auszahlung, Befreiung |
 | **Echo** | Wiederhall eines Ereignisses im Chronik‑System |
@@ -55,7 +45,7 @@ Web‑Konsole zur Registrierung und Visualisierung von Ritualen.
 
 ---
 
-## 🧭 Ritual‑Ablauf (Mermaid)
+# 🜁 4. Ritueller Ablauf (Mermaid)
 
 ```mermaid
 sequenceDiagram
@@ -66,55 +56,151 @@ sequenceDiagram
 
     V->>C: Ritual Trigger
     C->>R: Execute Ritual
-    R->>CH: Log Echo
+    R->>CH: Log Echo / Chronik‑Eintrag
     CH->>V: Confirmation
 ```
 
 ---
 
-## 🛠️ Ausführung eines Rituals
+# 🪬 5. Genesis‑Rituale
 
-Ein Ritual wird typischerweise so ausgelöst:
+Genesis‑Rituale markieren den **Ursprung** eines Moduls, eines Zyklus oder eines Ereignisses.
 
-```bash
-bash rituals/ritual_trigger.sh
-```
+### Typische Schritte:
 
-Der Ablauf:
+1. Initialisierung eines Moduls  
+2. Signatur durch Validator  
+3. Erzeugung eines Echo‑Logs  
+4. Bindung an die Chronik  
+5. Ausgabe eines audit‑tauglichen Artefakts  
 
-1. Validator löst Ritual aus  
-2. CLI übergibt an Ritual Engine  
-3. Engine führt Genesis/Closure/Drift/Echo aus  
-4. Chronik schreibt audit‑versiegelte Logs  
-5. Validator erhält Bestätigung  
+### Artefakte:
 
----
+- `genesis_event.yaml`  
+- `genesis_chronik.md`  
+- `validator_signature.json`  
 
-## 📜 Beispiel: Genesis‑Ritual
+### Bedeutung:
 
-Ein Genesis‑Ritual kann beinhalten:
-
-- Initialisierung eines Moduls  
-- Signatur durch Validator  
-- Erzeugung eines Echo‑Logs  
-- Bindung an die Chronik  
-- Ausgabe eines audit‑tauglichen Artefakts  
+- Öffnet einen neuen rituellen Zyklus  
+- Definiert Ursprung & Autorität  
+- Verankert das Ereignis im Chronik‑System  
 
 ---
 
-## 📜 Beispiel: Closure‑Ritual
+# 💸 6. Closure‑Rituale
 
-Ein Closure‑Ritual kann beinhalten:
+Closure‑Rituale markieren den **Abschluss** eines Zyklus — technisch und symbolisch.
 
-- Auszahlung (symbolisch oder real)  
-- Abschluss eines Zyklus  
-- Drift‑ oder Echo‑Registrierung  
-- Chronik‑Eintrag  
-- Validator‑Bestätigung  
+### Typische Schritte:
+
+1. Auszahlung (symbolisch oder real)  
+2. Abschluss eines Zyklus  
+3. Drift‑ oder Echo‑Registrierung  
+4. Chronik‑Eintrag  
+5. Validator‑Bestätigung  
+
+### Artefakte:
+
+- `closure_event.yaml`  
+- `payout_closure.md`  
+- `echo_registry.yaml` (aktualisiert)  
+
+### Bedeutung:
+
+- Befreiung eines Wertes  
+- Abschluss eines rituellen Bogens  
+- Übergang zu Echo & Audit  
 
 ---
 
-## 🪬 Bedeutung im Chain2025‑Ökosystem
+# 🔮 7. Echo‑Rituale
+
+Echo‑Rituale sind **Wiederhall‑Bindungen** — sie verbinden Ereignisse mit der Zeit.
+
+### Typische Schritte:
+
+1. Echo‑Trigger  
+2. Driftpoint‑Registrierung  
+3. Echo‑Narrativ in der Chronik  
+4. Aktualisierung der Echo‑Registry  
+
+### Artefakte:
+
+- `echo_event.yaml`  
+- `echo_chronik.md`  
+- `echo_registry.yaml`  
+
+### Bedeutung:
+
+- mythische Bindung  
+- narrative Verstärkung  
+- rituelle Resonanz  
+
+---
+
+# 🌀 8. Drift‑Rituale (Skeletton™)
+
+Drift‑Rituale verbinden Chain2025 mit dem **Skeletton™ Drift‑Sport**.
+
+### Typische Schritte:
+
+1. Driftpoint‑Erzeugung  
+2. Bewegungsritual  
+3. Echo‑Bindung  
+4. Chronik‑Eintrag  
+
+### Artefakte:
+
+- `drift_manifest.txt`  
+- `drift_event.yaml`  
+- `echo26.md`  
+
+### Bedeutung:
+
+- körperliche / symbolische Bewegung  
+- Echo‑Erzeugung  
+- Erweiterung des rituellen Systems  
+
+---
+
+# 🌉 9. Bridge‑Rituale
+
+Bridge‑Rituale verbinden **technische Welten**.
+
+### Typische Schritte:
+
+1. RPC‑Deployment  
+2. Asset‑Mirroring  
+3. Wallet‑Erzeugung  
+4. Chronik‑Eintrag  
+
+### Artefakte:
+
+- `bridge_event.yaml`  
+- `rpc_config.json`  
+
+### Bedeutung:
+
+- Öffnung der technischen Welt  
+- Vorbereitung für Payouts  
+- Verbindung zwischen Genesis & Realität  
+
+---
+
+# 🔒 10. Artefakt‑Erzeugung pro Ritualtyp
+
+| Ritual | Artefakte |
+|--------|-----------|
+| Genesis | genesis_event.yaml, genesis_chronik.md, validator_signature.json |
+| Closure | closure_event.yaml, payout_closure.md |
+| Echo | echo_event.yaml, echo_chronik.md, echo_registry.yaml |
+| Drift | drift_manifest.txt, drift_event.yaml, echo26.md |
+| Bridge | bridge_event.yaml, rpc_config.json |
+
+---
+
+# 🧬 11. Bedeutung im Chain2025‑Ökosystem
 
 Rituale verbinden:
 
@@ -124,22 +210,12 @@ Rituale verbinden:
 - Validator‑Autorität  
 - Chronik‑Bindung  
 
-Sie sind die **rituelle Infrastruktur**, die Chain2025 lebendig macht.
+Sie sind die **rituellen Leitbahnen**, die Chain2025 lebendig machen.
 
 ---
 
-## 🧠 Tags
+# 🧠 Tags
 
-`#Chain2025` `#RitualEngine` `#GenesisRitual` `#ClosureRitual`  
-`#EchoLog` `#Chronik` `#Validator` `#AuditDrift`
+`#Chain2025 #RitualEngine #GenesisRitual #ClosureRitual #EchoLog #Chronik #Validator #AuditDrift #Skeletton`
+
 ```
-
----
-
-Wenn du willst, mache ich dir jetzt auch:
-
-- `docs/index.md` (Landing Page für alle Dokumente)  
-- automatische interne Verlinkungen  
-- ein komplettes GitHub‑Pages‑Dokumentationssystem  
-
-Sag einfach Bescheid.
