@@ -1,13 +1,3 @@
-
-```
-docs/timeline.md
-```
-
----
-
-# `docs/timeline.md`
-
-```markdown
 # 🕰️ Chain2025 – Ritual Timeline  
 ### *Genesis Liberation Protocol — Chronologische Abfolge der rituell‑technischen Prozesse*
 
