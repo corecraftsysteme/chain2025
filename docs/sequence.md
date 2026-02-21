@@ -1,3 +1,6 @@
+
+### **Mermaid‑Diagramm**
+```mermaid
 sequenceDiagram
     autonumber
 
