@@ -1,12 +1,3 @@
-
-```
-docs/architecture.md
-```
-
----
-
-# `docs/architecture.md`
-
 ```markdown
 # 🜂 Chain2025 – End‑to‑End System Architecture  
 ### *Genesis Liberation Protocol — Audit‑sealed Infrastructure*
