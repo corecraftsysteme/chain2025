@@ -168,5 +168,3 @@ Dieses Modell bildet die Grundlage für:
 - Chronik‑Generierung  
 - Validator‑Rituale  
 - Skeletton™ Echo‑Integration  
-
-```
