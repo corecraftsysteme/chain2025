@@ -23,7 +23,7 @@ Jede Genesis = Schwelle.
 
 2. Registry Overview
 ASCII‑Graph
-Code
+
 SW-001 ──▶ DOC-010
 DOC-010 ──▶ (none)
 JSON‑Graph
@@ -32,6 +32,7 @@ json
   "nodes": ["SW-001", "DOC-010"],
   "edges": [["SW-001", "DOC-010"]]
 }
+
 3. Philosophie
 Technik = Ritual
 
