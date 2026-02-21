@@ -1,64 +1,57 @@
-# HYPERSECURITY.md  
-**Hyperspace‑CoreCraft Chain 2025**  
-Metaphysische Sicherheitsarchitektur & Resonanz‑Mechanismen  
-Autor: Daniel Aecherli (M.O.D.S.)  
-Version: Hyperlayer‑1.0
+# SECURITY_APPENDIX_HYPERSPACE.md  
+**Annex H – Hyperspace‑Security Layer**  
+Verbindung zwischen Chain2025 & Hyperspace‑CoreCraft  
+Autor: Daniel Aecherli (M.O.D.S.)
 
 ---
 
-## 🔐 [SECURITY PRINCIPLE]  
-Sicherheit ist im Hyperspace‑CoreCraft‑Layer kein Kontrollmechanismus,  
-sondern ein Resonanzfeld, das technische, narrative und rechtliche Ebenen verbindet.
-
-Alle Module, Agenten, Wallets und FLOPS‑Ströme operieren innerhalb eines  
-auditierbaren, multidimensionalen Sicherheitsraums.
+## 1. Zweck  
+Dieser Annex verbindet die technische Sicherheit von Chain2025  
+mit der metaphysischen Sicherheit des Hyperspace‑CoreCraft‑Layers.
 
 ---
 
-## 🧭 [VULNERABILITY DISCLOSURE]  
-Vertrauliche Meldung über:
+## 2. Synchronisationspunkte  
 
-- 📧 security@corecraft.systems  
-- 🔐 PGP Key: `security.asc`  
-- ⏱ Antwortzeit: 72h  
-
-Bitte angeben:  
-- Beschreibung  
-- betroffene Module  
-- Reproduktion  
-- potenzieller Impact  
+| Chain2025 | Hyperspace‑CoreCraft |
+|-----------|----------------------|
+| Audit‑Logs | Audit Log Sealing |
+| Validator‑Signaturen | Ritualisierte Agenten |
+| Wallet‑Sicherheit | FLOPS‑Schwellen |
+| Determinismus | Resonanz‑Stabilität |
+| Genesis‑Trigger | Genesis Lock |
+| UTF‑8 Standard | Encoding Standardization |
 
 ---
 
-## 🧱 [SECURITY ARCHITECTURE]  
-- **Modular Isolation** – jedes Modul ist audit‑versiegelt  
-- **Agent Separation** – Rollen sind sandboxed & archetypisch gebunden  
-- **Wallet Protection** – FLOPS‑Schwellen & Signaturen  
-- **Mining Resonance** – Mining wird gegen Raum‑Zeit‑Resonanz geprüft  
-- **Frontend Authenticity** – UI‑Komponenten sind signiert  
+## 3. Dual‑Layer‑Sicherheitsmodell  
+Chain2025 = technische Integrität  
+Hyperspace‑CoreCraft = symbolische Resonanz  
+
+Beide Ebenen sind komplementär, nicht konkurrierend.
 
 ---
 
-## 🧬 [CHAIN‑SPECIFIC MECHANISMS]  
-- **FLOPS Rate Limiting** – adaptive Schwellen gegen FLOPS‑Flooding  
-- **Genesis Lock** – nur ritualisierte Agenten können Genesis auslösen  
-- **Audit Log Sealing** – unveränderliche Audit‑Chroniken  
-- **Encoding Standardization** – UTF‑8 Pflicht für sicherheitskritische Artefakte  
+## 4. Rechtliche Synchronisation  
+- DLT‑Konformität gilt für beide Ebenen  
+- FLOPS Utility Notice ergänzt Chain2025‑Payout‑Regeln  
+- DSGVO/revDSG gelten für alle Agenten‑Daten  
 
 ---
 
-## ⚖️ [LEGAL FRAMEWORK]  
-- Swiss DLT Law  
-- DSGVO / revDSG  
-- FLOPS Utility Notice (kein Finanzinstrument)  
+## 5. Symbolische Synchronisation  
+Chain2025 nutzt:  
+> *Sicherheit ist Struktur.*
+
+Hyperspace‑CoreCraft nutzt:  
+> *Sicherheit ist Resonanz.*
+
+Annex H definiert:  
+> *Struktur + Resonanz = Integrität.*
 
 ---
 
-## 🧾 [DISCLAIMER]  
-Der Betreiber haftet nicht für externe Angriffe außerhalb der Hyperspace‑Domäne.
+## 6. Abschlussformel  
+> *Die goldene Sphäre schützt, was strukturiert ist.  
+> Die Chain schützt, was resonant ist.*
 
----
-
-## 🌀 [SYMBOLIC FOOTNOTE]  
-> *„Security is not control — it is resonance with origin.“*  
-> Jede Audit‑Spur ist ein Fragment der goldenen Sphäre.
