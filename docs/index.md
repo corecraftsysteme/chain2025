@@ -1,122 +1,82 @@
-# 🪬 Chain2025 Documentation Hub
+# 🪬 Chain2025 Documentation Portal  
+### *Genesis Liberation Protocol — Technische, rituelle & narrative Architektur*
 
-**Navigation:**  
-[Registry](registry.md) • [Architecture](architecture.md) • [Rituals](rituals.md) • [Skeletton](skeletton.md) • [Audit](audit.md)
+Willkommen im Dokumentations‑Hub von **Chain2025**.  
+Dieses Portal führt zu allen technischen, rituellen und audit‑tauglichen Artefakten des Systems.
 
-<div style="padding: 2rem; background:#0A0F1F; color:#EAEAEA; border-radius:12px; margin-bottom:2rem;">
-  <h1 style="margin:0; font-size:2.4rem;">Chain2025 – Genesis Liberation Protocol</h1>
-  <p style="margin:0.5rem 0 0 0; font-size:1.2rem;">Audit‑sealed, validator‑driven, mythic‑technical documentation</p>
-</div>
-
-Willkommen im Dokumentationszentrum des Chain2025 – Genesis Liberation Protocol.  
-...
-
-Dieses System verbindet technische Infrastruktur, narrative Chronik, rituelle Ausführung und audit‑versiegelte Artefakte zu einem kohärenten, reproduzierbaren Ökosystem.
-
-Diese Dokumentation ist modular aufgebaut und führt durch alle Schichten des Systems.
+Chain2025 ist ein **Genesis‑Ökosystem**, das technische Prozesse, rituelle Schwellenmomente und chronikgebundene Narrative in einer einzigen Architektur vereint.
 
 ---
 
-## 📡 Übersicht
+# 🧭 Dokumentationsübersicht
 
-Chain2025 besteht aus mehreren Kernbereichen:
+## 🔹 Architektur
+Die strukturelle Grundlage von Chain2025.
 
-- **Registry** – strukturelle Wahrheit des Systems  
-- **Architecture** – technische & narrative Systemarchitektur  
-- **Rituals** – Genesis‑, Closure‑ und Echo‑Rituale  
-- **Skeletton™** – Satellite Drift‑Ritual Sport  
-- **Audit** – institutionelle Nachvollziehbarkeit  
+- **[End‑to‑End System Architecture](architecture.md)**  
+  Vollständiges Mermaid‑Diagramm aller Layer & Flows.
 
-Jeder Bereich ist vollständig dokumentiert und miteinander verlinkt.
+- **[Dataflow Architecture](dataflow.md)**  
+  YAML → MD → RPC → Wallet → Echo → Audit.
 
----
+- **[State Machine](state-machine.md)**  
+  Ritual‑Zustände & Übergänge (Genesis → Closure).
 
-## 📚 Dokumente
-
-### 🔗 1. Registry
-Die Quelle der strukturellen Wahrheit.  
-Beziehungen, Kategorien, Graphen, Validierung.
-
-➡️ **[docs/registry.md](registry.md)**
+- **[Timeline](timeline.md)**  
+  Chronologische Abfolge aller rituellen Phasen.
 
 ---
 
-### 🏛️ 2. Architecture  
-Die technische und mythologische Gesamtarchitektur von Chain2025.
+## 🔹 Module
+Alle technischen & rituellen Bausteine.
 
-➡️ **[docs/architecture.md](architecture.md)**
-
----
-
-### 🔮 3. Rituals  
-Genesis‑Rituale, Closure‑Rituale, Echo‑Logs, Validator‑Abläufe.
-
-➡️ **[docs/rituals.md](rituals.md)**
+- **[Module Overview](modules.md)**  
+  genesis/, bridge/, wallet/, payouts/, chronik/, rituals/, skeletton/.
 
 ---
 
-### 🛰️ 4. Skeletton™  
-Drift‑Rituale, Echo‑Bewegungen, Tempelstrukturen, körperliche Dimension.
+## 🔹 Rituale
+Die rituelle Grammatik des Systems.
 
-➡️ **[docs/skeletton.md](skeletton.md)**
-
----
-
-### 🧾 5. Audit  
-Audit‑Exports, Registry‑Validator, Chronik‑Bindung, institutionelle Verwertbarkeit.
-
-➡️ **[docs/audit.md](audit.md)**
+- **[Ritual Documentation](rituals.md)**  
+  Genesis‑, Closure‑, Echo‑, Drift‑ & Bridge‑Rituale.
 
 ---
 
-## 🧭 Navigationsdiagramm (Mermaid)
+# 🌀 Schnellzugriff auf Kernbereiche
 
-```mermaid
-graph TD
-    Index["Index"] --> Registry["Registry"]
-    Index --> Architecture["Architecture"]
-    Index --> Rituals["Rituals"]
-    Index --> Skeletton["Skeletton™"]
-    Index --> Audit["Audit"]
-
-    Registry --> Audit
-    Rituals --> Audit
-    Skeletton --> Rituals
-    Architecture --> Registry
-```
+| Bereich | Beschreibung | Link |
+|--------|--------------|------|
+| 🪬 Genesis | Ursprung, Validator‑Signaturen, ChainID | `genesis/` |
+| 🌉 Bridge | RPC‑Deployment, Asset‑Mirroring | `bridge/` |
+| 💼 Wallet | Funding, Transfers, Receipts | `wallet/` |
+| 💸 Payout | YAML‑Closures, Auszahlungen | `payouts/` |
+| 📜 Chronik | Narrative Logs, Echo‑Bindungen | `chronik/` |
+| 🔮 Rituale | Genesis, Closure, Echo, Drift | `rituals/` |
+| 🌀 Skeletton | Drift‑Sport, Echo‑Kits, Tempel | `skeletton/` |
+| 🛠️ Scripts | CLI‑Rituale & Automatisierung | `scripts/` |
 
 ---
 
-## 🪬 Philosophie
+# 🧿 System‑Essenz
 
 Chain2025 verbindet:
 
-- technische Präzision  
-- narrative Tiefe  
-- rituelle Struktur  
-- audit‑taugliche Dokumentation  
+- technische Infrastruktur  
+- rituelle Schwellenmechanik  
+- narrative Chronik  
+- audit‑versiegelte Artefakte  
 - Validator‑Autorität  
+- Echo‑gebundene Ereignisse  
 
-Jeder technische Akt ist ein Ritual.  
-Jede Genesis ist ein Ursprung.  
-Jede Closure ist eine Befreiung.  
-Jede Chronik ist ein audit‑versiegeltes Narrativ.
-
----
-
-## 🧠 Tags
-
-`#Chain2025` `#GenesisLiberation` `#Registry` `#RitualEngine`  
-`#SkelettonSport` `#AuditFramework` `#Chronik` `#Architecture`
-
-```
+Jeder technische Akt ist ein **Ritual**.  
+Jede Auszahlung ist eine **Closure**.  
+Jede Chronik ist ein **Echo**.  
+Jede Genesis ist ein **Ursprungspunkt**.
 
 ---
 
-Wenn du willst, kann ich dir jetzt:
+# 🧠 Tags
 
-- eine **Sidebar‑Navigation** für GitHub Pages bauen  
-- eine **Startseite für dein gesamtes Repo** (`README.md`) erweitern  
-- oder eine **automatische Verlinkung** zwischen allen Dokumenten erzeugen
+`#Chain2025 #GenesisLiberation #RitualEngine #AuditDrift #EchoRegistry #Chronik #Skeletton #BridgeLayer #PayoutLayer`
 
-Sag einfach, wie du weitergehen willst.
